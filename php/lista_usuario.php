@@ -18,7 +18,7 @@ $result = $conn->query("SELECT * FROM usuario");
 
 <h2>Lista de Usuarios</h2>
 
-<a href="agregar_usuario.php" 
+<a href="../php/agregar_usuario.php" 
 style="padding:10px 20px; background:#4CAF50; color:white; text-decoration:none; border-radius:5px;">
 + Agregar Usuario
 </a>
@@ -39,8 +39,8 @@ style="padding:10px 20px; background:#4CAF50; color:white; text-decoration:none;
         <td><?= $row['nombre'] ?></td>
         <td><?= $row['rol'] ?></td>
         <td>
-            <a href="editar_usuario.php?id=<?= $row['id'] ?>" style="color:blue;">Editar</a> |
-            <a href="eliminar_usuario.php?id=<?= $row['id'] ?>" 
+            <a href="../php/editar_usuario.php?id=<?= $row['id'] ?>" style="color:blue;">Editar</a> |
+            <a href="../php/eliminar_usuario.php?id=<?= $row['id'] ?>" 
                 onclick="return confirm('¿Seguro que quieres eliminar este usuario?')" 
                 style="color:red;">
                 Eliminar
