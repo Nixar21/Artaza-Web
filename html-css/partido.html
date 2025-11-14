@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partidos y Resultados | ELBASK</title>
+    <meta name="description" content="Resultados actualizados de partidos internacionales de básquet: torneos Principan, SABA Club Championship y BLC Asia. Seguí el calendario y las estadísticas en ELBASK.">
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif; background-color: #1a1a1a; color: #cccccc;">
+
+    <!-- HEADER MEJORADO -->
+    <div style="background: linear-gradient(135deg, #4c0099 0%, #6d28d9 100%); color: #fff; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #5e10b1; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+        <div style="display: flex; align-items: center; gap: 30px;">
+            <span style="font-size: 28px; font-weight: bold; letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">ELBASK</span>
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <a href="../html-css/inicio1.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Inicio</a>
+                <a href="../html-css/partido.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Partidos</a>
+                <a href="../html-css/noticia.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Noticias</a>
+                <a href="../html-css/clasificacion.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Clasificación</a>
+                <a href="../html-css/calendario.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Calendario</a>
+                <a href="../html-css/formulario.html" style="color: #fff; padding: 8px 15px; text-decoration: none; font-size: 14px; border-radius: 5px;">Formulario</a>
+                <a href="../html-css/quienes-somos.html" style="color: #fff; padding: 8px 15px; text-decoration: none; font-size: 14px; border-radius: 5px;">Acerca de ELBASK</a>
+            </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <form action="buscar.php" method="GET" style="display: flex;">
+                <input type="text" name="q" placeholder="Buscar Noticias, Equipos..." 
+                    style="padding: 8px 15px; border: none; border-radius: 20px 0 0 20px; background-color: rgba(255,255,255,0.2); color: #fff; font-size: 14px; width: 200px;">
+                <button type="submit" style="background-color: #5e10b1; color: white; border: none; padding: 8px 12px; border-radius: 0 20px 20px 0; cursor: pointer; font-size: 14px;">🔍</button>
+            </form>
+            <a href="../php/index.php" style="color: #fff; text-decoration: none; padding: 8px 20px; background-color: #5e10b1; border-radius: 20px; font-size: 14px; font-weight: bold;">LOGIN</a>
+        </div>
+    </div>
+    <!-- Main Container -->
+    <div style="max-width: 1400px; margin: 30px auto; padding: 0 20px;">
+        
+        <!-- Page Title -->
+        <div style="background: linear-gradient(135deg, #5e10b1 0%, #7c3aed 100%); color: #fff; padding: 25px 30px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(94,16,177,0.3);">
+            <h1 style="font-size: 32px; margin: 0; font-weight: bold; letter-spacing: 1px;">🏀 Partidos & Resultados</h1>
+            <p style="margin: 8px 0 0 0; font-size: 14px; opacity: 0.9;">Resultados en vivo y finalizados de todas las competiciones</p>
+        </div>
+
+        <!-- Region Filters -->
+        <div style="background-color: #2b2b2b; padding: 15px 25px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.3); display: flex; gap: 10px; align-items: center; flex-wrap: wrap; overflow-x: auto;">
+            <button style="background: linear-gradient(135deg, #5e10b1 0%, #7c3aed 100%); color: #fff; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: bold; box-shadow: 0 2px 8px rgba(94,16,177,0.3); transition: all 0.3s ease; white-space: nowrap;">🌍 Todos</button>
+            <button style="background-color: #3b3b3b; color: #ccc; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-size: 13px; transition: all 0.3s ease; white-space: nowrap;">🌎 América</button>
+            <button style="background-color: #3b3b3b; color: #ccc; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-size: 13px; transition: all 0.3s ease; white-space: nowrap;">🌍 Europa</button>
+            <button style="background-color: #3b3b3b; color: #ccc; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-size: 13px; transition: all 0.3s ease; white-space: nowrap;">🌏 Asia</button>
+            <button style="background-color: #3b3b3b; color: #ccc; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-size: 13px; transition: all 0.3s ease; white-space: nowrap;">🌍 África</button>
+            <button style="background-color: #3b3b3b; color: #ccc; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-size: 13px; transition: all 0.3s ease; white-space: nowrap;">🌏 Oceanía</button>
+        </div>
+
+        <!-- Calendar Navigation -->
+        <div style="background-color: #2b2b2b; padding: 20px 25px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2 style="color: #ffeb3b; font-size: 22px; margin: 0;">📅 Abril 2025</h2>
+                <div style="display: flex; gap: 10px;">
+                    <button style="background-color: #5e10b1; color: #fff; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: bold;">◀ Anterior</button>
+                    <button style="background-color: #5e10b1; color: #fff; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: bold;">Siguiente ▶</button>
+                </div>
+            </div>
+            
+            <!-- Calendar Days Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 10px;">
+                <div style="background-color: #3b3b3b; padding: 15px 10px; border-radius: 8px; text-align: center; cursor: pointer; transition: all 0.3s ease; border: 2px solid transparent;">
+                    <div style="color: #999; font-size: 11px; margin-bottom: 5px;">MAR</div>
+                    <div style="color: #fff; font-size: 20px; font-weight: bold;">01</div>
+                </div>
+                <div style="background-color: #3b3b3b; padding: 15px 10px; border-radius: 8px; text-align: center; cursor: pointer; transition: all 0.3s ease; border: 2px solid transparent;">
+                    <div style="color: #999; font-size: 11px; margin-bottom: 5px;">MIÉ</div>
+                    <div style="color: #fff; font-size: 20px; font-weight: bold;">02</div>
+                </div>
+                <div style="background-color: #3b3b3b; padding: 15px 10px; border-radius: 8px; text-align: center; cursor: pointer; transition: all 0.3s ease; border: 2px solid transparent;">
+                    <div style="color: #999; font-size: 11px; margin-bottom: 5px;">JUE</div>
+                    <div style="color: #fff; font-size: 20px; font-weight: bold;">03</div>
+                </div>
+                <div style="background: linear-gradient(135deg, #5e10b1 0%, #7c3aed 100%); padding: 15px 10px; border-radius: 8px; text-align: center; cursor: pointer; box-shadow: 0 4px 12px rgba(94,16,177,0.4); border: 2px solid #7c3aed;">
+                    <div style="color: #ffeb3b; font-size: 11px; margin-bottom: 5px; font-weight: bold;">VIE</div>
+                    <div style="color: #fff; font-size: 20px; font-weight: bold;">04</div>
+                    <div style="color: #ffeb3b; font-size: 10px; margin-top: 5px;">HOY</div>
+                </div>
+                <div style="background-color: #3b3b3b; padding: 15px 10px; border-radius: 8px; text-align: center; cursor: pointer; transition: all 0.3s ease; border: 2px solid transparent;">
+                    <div style="color: #999; font-size: 11px; margin-bottom: 5px;">SÁB</div>
+                    <div style="color: #fff; font-size: 20px; font-weight: bold;">05</div>
+                </div>
+                <div style="background-color: #3b3b3b; padding: 15px 10px; border-radius: 8px; text-align: center; cursor: pointer; transition: all 0.3s ease; border: 2px solid transparent;">
+                    <div style="color: #999; font-size: 11px; margin-bottom: 5px;">DOM</div>
+                    <div style="color: #fff; font-size: 20px; font-weight: bold;">06</div>
+                </div>
+                <div style="background-color: #3b3b3b; padding: 15px 10px; border-radius: 8px; text-align: center; cursor: pointer; transition: all 0.3s ease; border: 2px solid transparent;">
+                    <div style="color: #999; font-size: 11px; margin-bottom: 5px;">LUN</div>
+                    <div style="color: #fff; font-size: 20px; font-weight: bold;">07</div>
+                </div>
+                <div style="background-color: #3b3b3b; padding: 15px 10px; border-radius: 8px; text-align: center; cursor: pointer; transition: all 0.3s ease; border: 2px solid transparent;">
+                    <div style="color: #999; font-size: 11px; margin-bottom: 5px;">MAR</div>
+                    <div style="color: #fff; font-size: 20px; font-weight: bold;">08</div>
+                </div>
+                <div style="background-color: #3b3b3b; padding: 15px 10px; border-radius: 8px; text-align: center; cursor: pointer; transition: all 0.3s ease; border: 2px solid transparent;">
+                    <div style="color: #999; font-size: 11px; margin-bottom: 5px;">MIÉ</div>
+                    <div style="color: #fff; font-size: 20px; font-weight: bold;">09</div>
+                </div>
+                <div style="background-color: #3b3b3b; padding: 15px 10px; border-radius: 8px; text-align: center; cursor: pointer; transition: all 0.3s ease; border: 2px solid transparent;">
+                    <div style="color: #999; font-size: 11px; margin-bottom: 5px;">JUE</div>
+                    <div style="color: #fff; font-size: 20px; font-weight: bold;">10</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured News -->
+        <div style="background-color: #2b2b2b; padding: 20px 25px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.3); border-left: 4px solid #ffeb3b;">
+            <h3 style="color: #ffeb3b; font-size: 18px; margin: 0 0 10px 0;">⭐ Noticia Destacada</h3>
+            <a href="#" style="color: #fff; text-decoration: none; font-size: 16px; font-weight: bold; line-height: 1.5;">NBA players who could play in FIBA EuroBasket 2025</a>
+            <p style="color: #999; font-size: 13px; margin: 8px 0 0 0;">Conoce qué jugadores de la NBA podrían participar en el próximo EuroBasket</p>
+        </div>
+
+        <!-- SABA Club Championship -->
+        <section style="background-color: #2b2b2b; padding: 25px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 2px solid #5e10b1;">
+                <h2 style="color: #fff; font-size: 24px; margin: 0; display: flex; align-items: center; gap: 10px;">
+                    🏆 SABA Club Championship 2025
+                </h2>
+                <span style="background-color: #22c55e; color: #000; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: bold;">EN VIVO</span>
+            </div>
+
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                    <thead>
+                        <tr style="background: linear-gradient(135deg, #38006d 0%, #5e10b1 100%); color: #fff;">
+                            <th style="padding: 15px 12px; text-align: left; border-radius: 8px 0 0 0; font-weight: bold;">Fase</th>
+                            <th style="padding: 15px 12px; text-align: center; font-weight: bold;">Equipo 1</th>
+                            <th style="padding: 15px 12px; text-align: center; font-weight: bold;"></th>
+                            <th style="padding: 15px 12px; text-align: center; font-weight: bold;">Equipo 2</th>
+                            <th style="padding: 15px 12px; text-align: center; border-radius: 0 8px 0 0; font-weight: bold;">Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background-color: #3b3b3b; border-bottom: 2px solid #2b2b2b; transition: all 0.3s ease;">
+                            <td style="padding: 18px 12px; color: #999; font-size: 12px;">FASE DE GRUPOS - GRUPO A</td>
+                            <td style="padding: 18px 12px; text-align: center;">
+                                <div style="display: inline-block; background-color: #5e10b1; color: #fff; padding: 8px 15px; border-radius: 8px; font-weight: bold;">THD</div>
+                            </td>
+                            <td style="padding: 18px 12px; text-align: center; color: #666; font-weight: bold;">VS</td>
+                            <td style="padding: 18px 12px; text-align: center;">
+                                <div style="display: inline-block; background-color: #5e10b1; color: #fff; padding: 8px 15px; border-radius: 8px; font-weight: bold;">CBC</div>
+                            </td>
+                            <td style="padding: 18px 12px; text-align: center;">
+                                <div style="background: linear-gradient(135deg, #3b3b3b 0%, #2b2b2b 100%); padding: 10px 20px; border-radius: 8px; display: inline-block; border: 2px solid #5e10b1;">
+                                    <span style="color: #ff4444; font-weight: bold; font-size: 18px;">51</span>
+                                    <span style="color: #666; margin: 0 8px;">-</span>
+                                    <span style="color: #22c55e; font-weight: bold; font-size: 18px;">98</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="background-color: #3b3b3b; border-bottom: 2px solid #2b2b2b; transition: all 0.3s ease;">
+                            <td style="padding: 18px 12px; color: #999; font-size: 12px;">FASE DE GRUPOS - GRUPO A</td>
+                            <td style="padding: 18px 12px; text-align: center;">
+                                <div style="display: inline-block; background-color: #5e10b1; color: #fff; padding: 8px 15px; border-radius: 8px; font-weight: bold;">TND</div>
+                            </td>
+                            <td style="padding: 18px 12px; text-align: center; color: #666; font-weight: bold;">VS</td>
+                            <td style="padding: 18px 12px; text-align: center;">
+                                <div style="display: inline-block; background-color: #5e10b1; color: #fff; padding: 8px 15px; border-radius: 8px; font-weight: bold;">TCL</div>
+                            </td>
+                            <td style="padding: 18px 12px; text-align: center;">
+                                <div style="background: linear-gradient(135deg, #3b3b3b 0%, #2b2b2b 100%); padding: 10px 20px; border-radius: 8px; display: inline-block; border: 2px solid #5e10b1;">
+                                    <span style="color: #22c55e; font-weight: bold; font-size: 18px;">118</span>
+                                    <span style="color: #666; margin: 0 8px;">-</span>
+                                    <span style="color: #ff4444; font-weight: bold; font-size: 18px;">44</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button style="background: linear-gradient(135deg, #5e10b1 0%, #7c3aed 100%); color: #fff; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; width: 100%; margin-top: 20px; font-size: 14px; font-weight: bold; box-shadow: 0 4px 12px rgba(94,16,177,0.3); transition: all 0.3s ease;">
+                Ver Todos los Partidos →
+            </button>
+        </section>
+
+        <!-- BLC Asia - East -->
+        <section style="background-color: #2b2b2b; padding: 25px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 2px solid #5e10b1;">
+                <h2 style="color: #fff; font-size: 24px; margin: 0; display: flex; align-items: center; gap: 10px;">
+                    🏀 BLC Asia - East 2025
+                </h2>
+                <span style="background-color: #999; color: #000; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: bold;">FINALIZADO</span>
+            </div>
+
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                    <thead>
+                        <tr style="background: linear-gradient(135deg, #38006d 0%, #5e10b1 100%); color: #fff;">
+                            <th style="padding: 15px 12px; text-align: left; border-radius: 8px 0 0 0; font-weight: bold;">Fase</th>
+                            <th style="padding: 15px 12px; text-align: center; font-weight: bold;">Equipo 1</th>
+                            <th style="padding: 15px 12px; text-align: center; font-weight: bold;"></th>
+                            <th style="padding: 15px 12px; text-align: center; font-weight: bold;">Equipo 2</th>
+                            <th style="padding: 15px 12px; text-align: center; border-radius: 0 8px 0 0; font-weight: bold;">Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background-color: #3b3b3b; transition: all 0.3s ease;">
+                            <td style="padding: 18px 12px; color: #999; font-size: 12px;">FASE DE GRUPOS - GRUPO A</td>
+                            <td style="padding: 18px 12px; text-align: center;">
+                                <div style="display: inline-block; background-color: #5e10b1; color: #fff; padding: 8px 15px; border-radius: 8px; font-weight: bold;">PJB</div>
+                            </td>
+                            <td style="padding: 18px 12px; text-align: center; color: #666; font-weight: bold;">VS</td>
+                            <td style="padding: 18px 12px; text-align: center;">
+                                <div style="display: inline-block; background-color: #5e10b1; color: #fff; padding: 8px 15px; border-radius: 8px; font-weight: bold;">TYP</div>
+                            </td>
+                            <td style="padding: 18px 12px; text-align: center;">
+                                <div style="background: linear-gradient(135deg, #3b3b3b 0%, #2b2b2b 100%); padding: 10px 20px; border-radius: 8px; display: inline-block; border: 2px solid #5e10b1;">
+                                    <span style="color: #ff4444; font-weight: bold; font-size: 18px;">64</span>
+                                    <span style="color: #666; margin: 0 8px;">-</span>
+                                    <span style="color: #22c55e; font-weight: bold; font-size: 18px;">88</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button style="background: linear-gradient(135deg, #5e10b1 0%, #7c3aed 100%); color: #fff; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; width: 100%; margin-top: 20px; font-size: 14px; font-weight: bold; box-shadow: 0 4px 12px rgba(94,16,177,0.3); transition: all 0.3s ease;">
+                Ver Estadísticas Completas →
+            </button>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer style="background: linear-gradient(135deg, #430199 0%, #6d28d9 100%); color: #fff; text-align: center; padding: 30px 20px; margin-top: 50px; border-top: 3px solid #5e10b1;">
+        <div style="max-width: 1300px; margin: 0 auto;">
+            <p style="font-size: 18px; font-weight: bold; letter-spacing: 2px; margin: 0 0 10px 0;">ELBASK</p>
+            <p style="font-size: 14px; opacity: 0.9; margin: 5px 0;">Partidos y Resultados | Básquetbol Internacional</p>
+            <div style="height: 1px; background-color: rgba(255,255,255,0.2); margin: 20px auto; max-width: 600px;"></div>
+            <p style="font-size: 13px; margin: 5px 0;">Escuela Educación Técnica 3139 "Gral. Martín Miguel de Güemes"</p>
+            <p style="font-size: 13px; margin: 5px 0;">Alumno: Yañez Nicolás | Profesor: Artaza</p>
+            <p style="margin: 15px 0 0 0; font-size: 13px;">
+                Contacto: <a href="mailto:elbask@gmail.com" style="color: #fff; text-decoration: underline;">elbask@gmail.com</a>
+            </p>
+            <p style="margin: 15px 0 0 0; font-size: 12px; opacity: 0.7;">&copy; 2025 ELBASK. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

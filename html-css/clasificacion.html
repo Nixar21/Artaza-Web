@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELBASK - Clasificación</title>
+
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif; background-color: #1a1a1a; color: #cccccc;">
+
+    <!-- HEADER MEJORADO -->
+    <div style="background: linear-gradient(135deg, #4c0099 0%, #6d28d9 100%); color: #fff; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #5e10b1; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+        <div style="display: flex; align-items: center; gap: 30px;">
+            <span style="font-size: 28px; font-weight: bold; letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">ELBASK</span>
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <a href="../html-css/inicio1.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Inicio</a>
+                <a href="../html-css/partido.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Partidos</a>
+                <a href="../html-css/noticia.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Noticias</a>
+                <a href="../html-css/clasificacion.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Clasificación</a>
+                <a href="../html-css/calendario.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Calendario</a>
+                <a href="../html-css/formulario.html" style="color: #fff; padding: 8px 15px; text-decoration: none; font-size: 14px; border-radius: 5px;">Formulario</a>
+                <a href="../html-css/quienes-somos.html" style="color: #fff; padding: 8px 15px; text-decoration: none; font-size: 14px; border-radius: 5px;">Acerca de ELBASK</a>
+            </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <form action="buscar.php" method="GET" style="display: flex;">
+                <input type="text" name="q" placeholder="Buscar Noticias, Equipos..." 
+                    style="padding: 8px 15px; border: none; border-radius: 20px 0 0 20px; background-color: rgba(255,255,255,0.2); color: #fff; font-size: 14px; width: 200px;">
+                <button type="submit" style="background-color: #5e10b1; color: white; border: none; padding: 8px 12px; border-radius: 0 20px 20px 0; cursor: pointer; font-size: 14px;">🔍</button>
+            </form>
+            <a href="../php/index.php" style="color: #fff; text-decoration: none; padding: 8px 20px; background-color: #5e10b1; border-radius: 20px; font-size: 14px; font-weight: bold;">LOGIN</a>
+        </div>
+    </div>
+    <!-- Main Container -->
+    <div style="max-width: 1300px; margin: 30px auto; padding: 0 20px;">
+        
+    <!-- NAVEGACIÓN DE TABS -->
+    <div style="background-color: #2b2b2b; padding: 15px 25px; display: flex; gap: 15px; align-items: center; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.3); overflow-x: auto;">
+        <a href="html-css/clasificacion.html" style="background: linear-gradient(135deg, #5e10b1 0%, #7c3aed 100%); color: #fff; text-decoration: none; padding: 10px 25px; border-radius: 20px; font-size: 14px; font-weight: bold; white-space: nowrap; box-shadow: 0 2px 8px rgba(94,16,177,0.3);">División A</a>
+        <a href="#" class="tab-link" style="color: #ccc; text-decoration: none; padding: 10px 20px; border-radius: 20px; font-size: 14px; white-space: nowrap; transition: all 0.3s ease;">División B</a>
+        <a href="../html-css/jugadores.html" class="tab-link" style="color: #ccc; text-decoration: none; padding: 10px 20px; border-radius: 20px; font-size: 14px; white-space: nowrap; transition: all 0.3s ease;">Jugadores</a>
+        <a href="../html-css/historial-eventos.html" class="tab-link" style="color: #ccc; text-decoration: none; padding: 10px 20px; border-radius: 20px; font-size: 14px; white-space: nowrap; transition: all 0.3s ease;">Historial de Eventos</a>
+        <a href="../html-css/equipo.html" class="tab-link" style="color: #ccc; text-decoration: none; padding: 10px 20px; border-radius: 20px; font-size: 14px; white-space: nowrap; transition: all 0.3s ease;">Equipo</a>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div style="max-width: 1300px; margin: 40px auto; padding: 0 20px;">
+        
+        <!-- TÍTULO -->
+        <div style="text-align: center; margin-bottom: 35px;">
+            <h1 style="color: #fff; font-size: 42px; margin: 0 0 10px 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">🏆 Tabla de Clasificación</h1>
+            <p style="color: #999; font-size: 16px; margin: 0;">División A • Temporada 2024-2025</p>
+        </div>
+
+        <!-- TABLA -->
+        <div style="background-color: #2b2b2b; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.4);">
+            <table style="width: 100%; border-collapse: collapse; font-size: 15px; color: #fff;">
+                
+                <!-- ENCABEZADO -->
+                <thead style="background: linear-gradient(135deg, #38006d 0%, #5e10b1 100%); color: #fff; text-transform: uppercase;">
+                    <tr>
+                        <th style="padding: 18px 15px; text-align: left; width: 5%; font-size: 13px; font-weight: bold;">#</th>
+                        <th style="padding: 18px 15px; text-align: left; width: 30%; font-size: 13px; font-weight: bold;">EQUIPO</th>
+                        <th style="padding: 18px 15px; text-align: center; width: 8%; font-size: 13px; font-weight: bold;">G</th>
+                        <th style="padding: 18px 15px; text-align: center; width: 8%; font-size: 13px; font-weight: bold;">P</th>
+                        <th style="padding: 18px 15px; text-align: center; width: 10%; font-size: 13px; font-weight: bold;">RACHA</th>
+                        <th style="padding: 18px 15px; text-align: center; width: 10%; font-size: 13px; font-weight: bold;">% VIC.</th>
+                        <th style="padding: 18px 15px; text-align: center; width: 8%; font-size: 13px; font-weight: bold;">DIF.</th>
+                        <th style="padding: 18px 15px; text-align: center; width: 12%; font-size: 13px; font-weight: bold;">ÚLT. 10</th>
+                    </tr>
+                </thead>
+                
+                <!-- CUERPO -->
+                <tbody>
+                    <!-- Posición 1 -->
+                    <tr class="table-row" style="background-color: #2d2d2d; border-bottom: 1px solid #444; transition: all 0.3s ease;">
+                        <td style="padding: 18px 15px; text-align: left;">
+                            <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 16px; color: #000; box-shadow: 0 2px 6px rgba(255,215,0,0.4);">1</div>
+                        </td>
+                        <td style="padding: 18px 15px; text-align: left;">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #5e10b1 0%, #7c3aed 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px;">🏀</div>
+                                <div>
+                                    <div style="font-weight: bold; color: #fff; font-size: 16px;">Tucumán Basket</div>
+                                    <div style="font-size: 12px; color: #888;">Tucumán, Argentina</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="padding: 18px 15px; text-align: center; font-weight: bold; color: #22c55e; font-size: 16px;">15</td>
+                        <td style="padding: 18px 15px; text-align: center; font-weight: bold; color: #ef4444; font-size: 16px;">3</td>
+                        <td style="padding: 18px 15px; text-align: center;">
+                            <span style="background-color: #22c55e; color: #000; padding: 5px 12px; border-radius: 15px; font-size: 13px; font-weight: bold;">W5</span>
+                        </td>
+                        <td style="padding: 18px 15px; text-align: center; font-weight: bold; color: #fff; font-size: 16px;">.833</td>
+                        <td style="padding: 18px 15px; text-align: center; color: #888; font-size: 15px;">-</td>
+                        <td style="padding: 18px 15px; text-align: center; font-size: 15px; color: #22c55e; font-weight: bold;">8-2</td>
+                    </tr>
+
+                    <!-- Posición 2 -->
+                    <tr class="table-row" style="background-color: #2b2b2b; border-bottom: 1px solid #444; transition: all 0.3s ease;">
+                        <td style="padding: 18px 15px; text-align: left;">
+                            <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #C0C0C0 0%, #808080 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 16px; color: #000; box-shadow: 0 2px 6px rgba(192,192,192,0.4);">2</div>
+                        </td>
+                        <td style="padding: 18px 15px; text-align: left;">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #ff9900 0%, #ff6600 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px;">⭐</div>
+                                <div>
+                                    <div style="font-weight: bold; color: #fff; font-size: 16px;">Salta Capital</div>
+                                    <div style="font-size: 12px; color: #888;">Salta, Argentina</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="padding: 18px 15px; text-align: center; font-weight: bold; color: #22c55e; font-size: 16px;">14</td>
+                        <td style="padding: 18px 15px; text-align: center; font-weight: bold; color: #ef4444; font-size: 16px;">4</td>
+                        <td style="padding: 18px 15px; text-align: center;">
+                            <span style="background-color: #ef4444; color: #fff; padding: 5px 12px; border-radius: 15px; font-size: 13px; font-weight: bold;">L2</span>
+                        </td>
+                        <td style="padding: 18px 15px; text-align: center; font-weight: bold; color: #fff; font-size: 16px;">.777</td>
+                        <td style="padding: 18px 15px; text-align: center; color: #ff9900; font-size: 15px; font-weight: bold;">1.0</td>
+                        <td style="padding: 18px 15px; text-align: center; font-size: 15px; color: #22c55e; font-weight: bold;">7-3</td>
+                    </tr>
+
+                    <!-- Posición 3 -->
+                    <tr class="table-row" style="background-color: #2d2d2d; border-bottom: 1px solid #444; transition: all 0.3s ease;">
+                        <td style="padding: 18px 15px; text-align: left;">
+                            <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #CD7F32 0%, #8B4513 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 16px; color: #fff; box-shadow: 0 2px 6px rgba(205,127,50,0.4);">3</div>
+                        </td>
+                        <td style="padding: 18px 15px; text-align: left;">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px;">💪</div>
+                                <div>
+                                    <div style="font-weight: bold; color: #fff; font-size: 16px;">Córdoba Giants</div>
+                                    <div style="font-size: 12px; color: #888;">Córdoba, Argentina</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="padding: 18px 15px; text-align: center; font-weight: bold; color: #22c55e; font-size: 16px;">10</td>
+                        <td style="padding: 18px 15px; text-align: center; font-weight: bold; color: #ef4444; font-size: 16px;">8</td>
+                        <td style="padding: 18px 15px; text-align: center;">
+                            <span style="background-color: #22c55e; color: #000; padding: 5px 12px; border-radius: 15px; font-size: 13px; font-weight: bold;">W1</span>
+                        </td>
+                        <td style="padding: 18px 15px; text-align: center; font-weight: bold; color: #fff; font-size: 16px;">.555</td>
+                        <td style="padding: 18px 15px; text-align: center; color: #888; font-size: 15px;">5.0</td>
+                        <td style="padding: 18px 15px; text-align: center; font-size: 15px; color: #ff9900;">5-5</td>
+                    </tr>
+
+                    <!-- Posición 4 -->
+                    <tr class="table-row" style="background-color: #2b2b2b; border-bottom: 1px solid #444; transition: all 0.3s ease;">
+                        <td style="padding: 18px 15px; text-align: left;">
+                            <div style="width: 32px; height: 32px; background-color: #333; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 16px; color: #888;">4</div>
+                        </td>
+                        <td style="padding: 18px 15px; text-align: left;">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px;">⚡</div>
+                                <div>
+                                    <div style="font-weight: bold; color: #ddd; font-size: 16px;">Mendoza Titans</div>
+                                    <div style="font-size: 12px; color: #888;">Mendoza, Argentina</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="padding: 18px 15px; text-align: center; font-weight: bold; color: #22c55e; font-size: 16px;">8</td>
+                        <td style="padding: 18px 15px; text-align: center; font-weight: bold; color: #ef4444; font-size: 16px;">10</td>
+                        <td style="padding: 18px 15px; text-align: center;">
+                            <span style="background-color: #ef4444; color: #fff; padding: 5px 12px; border-radius: 15px; font-size: 13px; font-weight: bold;">L4</span>
+                        </td>
+                        <td style="padding: 18px 15px; text-align: center; font-weight: bold; color: #ddd; font-size: 16px;">.444</td>
+                        <td style="padding: 18px 15px; text-align: center; color: #888; font-size: 15px;">7.0</td>
+                        <td style="padding: 18px 15px; text-align: center; font-size: 15px; color: #ef4444;">3-7</td>
+                    </tr>
+
+                    <!-- Posición 5 -->
+                    <tr class="table-row" style="background-color: #2d2d2d; transition: all 0.3s ease;">
+                        <td style="padding: 18px 15px; text-align: left;">
+                            <div style="width: 32px; height: 32px; background-color: #333; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 16px; color: #888;">5</div>
+                        </td>
+                        <td style="padding: 18px 15px; text-align: left;">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px;">🔥</div>
+                                <div>
+                                    <div style="font-weight: bold; color: #ddd; font-size: 16px;">Rosario Hoops</div>
+                                    <div style="font-size: 12px; color: #888;">Rosario, Argentina</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="padding: 18px 15px; text-align: center; font-weight: bold; color: #22c55e; font-size: 16px;">5</td>
+                        <td style="padding: 18px 15px; text-align: center; font-weight: bold; color: #ef4444; font-size: 16px;">13</td>
+                        <td style="padding: 18px 15px; text-align: center;">
+                            <span style="background-color: #22c55e; color: #000; padding: 5px 12px; border-radius: 15px; font-size: 13px; font-weight: bold;">W3</span>
+                        </td>
+                        <td style="padding: 18px 15px; text-align: center; font-weight: bold; color: #ddd; font-size: 16px;">.277</td>
+                        <td style="padding: 18px 15px; text-align: center; color: #888; font-size: 15px;">10.0</td>
+                        <td style="padding: 18px 15px; text-align: center; font-size: 15px; color: #ef4444;">4-6</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- LEYENDA -->
+        <div style="margin-top: 30px; display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; background-color: #2b2b2b; padding: 20px; border-radius: 12px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 14px; color: #999;">G = Ganados</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 14px; color: #999;">P = Perdidos</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="background-color: #22c55e; color: #000; padding: 3px 8px; border-radius: 10px; font-size: 11px; font-weight: bold;">W</span>
+                <span style="font-size: 14px; color: #999;">= Victoria</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="background-color: #ef4444; color: #fff; padding: 3px 8px; border-radius: 10px; font-size: 11px; font-weight: bold;">L</span>
+                <span style="font-size: 14px; color: #999;">= Derrota</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 14px; color: #999;">Dif. = Diferencia de juegos</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer style="background: linear-gradient(135deg, #430199 0%, #6d28d9 100%); color: #fff; text-align: center; padding: 30px 20px; margin-top: 50px; border-top: 3px solid #5e10b1;">
+        <div style="max-width: 1300px; margin: 0 auto;">
+            <p style="font-size: 18px; font-weight: bold; margin: 0 0 10px 0; letter-spacing: 2px;">ELBASK</p>
+            <p style="margin: 5px 0; font-size: 14px; opacity: 0.9;">Equipos Nacionales | Básquetbol Internacional</p>
+            <div style="height: 1px; background-color: rgba(255,255,255,0.2); margin: 20px auto; max-width: 600px;"></div>
+            <p style="margin: 5px 0; font-size: 13px;">Escuela Educación Técnica 3139 "Gral. Martín Miguel de Güemes"</p>
+            <p style="margin: 5px 0; font-size: 13px;">Alumno: Yañez Nicolás | Profesor: Artaza</p>
+            <p style="margin: 15px 0 0 0; font-size: 13px;">
+                Contacto: <a href="mailto:elbask@gmail.com" style="color: #fff; text-decoration: underline;">elbask@gmail.com</a>
+            </p>
+            <p style="margin: 15px 0 0 0; font-size: 12px; opacity: 0.7;">&copy; 2025 ELBASK. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

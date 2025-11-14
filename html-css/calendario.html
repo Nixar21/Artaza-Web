@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELBASK - Calendario</title>
+
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif; background-color: #1a1a1a; color: #cccccc;">
+    <!-- HEADER MEJORADO -->
+    <div style="background: linear-gradient(135deg, #4c0099 0%, #6d28d9 100%); color: #fff; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #5e10b1; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+        <div style="display: flex; align-items: center; gap: 30px;">
+            <span style="font-size: 28px; font-weight: bold; letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">ELBASK</span>
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <a href="../html-css/inicio1.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Inicio</a>
+                <a href="../html-css/partido.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Partidos</a>
+                <a href="../html-css/noticia.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Noticias</a>
+                <a href="../html-css/clasificacion.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Clasificación</a>
+                <a href="../html-css/calendario.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Calendario</a>
+                <a href="../html-css/formulario.html" style="color: #fff; padding: 8px 15px; text-decoration: none; font-size: 14px; border-radius: 5px;">Formulario</a>
+                <a href="../html-css/quienes-somos.html" style="color: #fff; padding: 8px 15px; text-decoration: none; font-size: 14px; border-radius: 5px;">Acerca de ELBASK</a>
+            </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <form action="buscar.php" method="GET" style="display: flex;">
+                <input type="text" name="q" placeholder="Buscar Noticias, Equipos..." 
+                    style="padding: 8px 15px; border: none; border-radius: 20px 0 0 20px; background-color: rgba(255,255,255,0.2); color: #fff; font-size: 14px; width: 200px;">
+                <button type="submit" style="background-color: #5e10b1; color: white; border: none; padding: 8px 12px; border-radius: 0 20px 20px 0; cursor: pointer; font-size: 14px;">🔍</button>
+            </form>
+            <a href="../php/index.php" style="color: #fff; text-decoration: none; padding: 8px 20px; background-color: #5e10b1; border-radius: 20px; font-size: 14px; font-weight: bold;">LOGIN</a>
+        </div>
+    </div>
+
+    <!-- FILTROS DE MESES -->
+    <div style="background-color: #2b2b2b; padding: 15px 20px; display: flex; align-items: center; gap: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.3); overflow-x: auto;">
+        <a href="#" style="background: linear-gradient(135deg, #5e10b1 0%, #7c3aed 100%); color: #fff; text-decoration: none; padding: 10px 25px; border-radius: 20px; font-size: 14px; font-weight: bold; white-space: nowrap; box-shadow: 0 2px 8px rgba(94,16,177,0.3);">TODO</a>
+        <a href="#" class="month-tab" style="color: #ccc; text-decoration: none; padding: 10px 20px; border-radius: 20px; font-size: 14px; white-space: nowrap; transition: all 0.3s ease;">📅 Noviembre</a>
+        <a href="#" class="month-tab" style="color: #ccc; text-decoration: none; padding: 10px 20px; border-radius: 20px; font-size: 14px; white-space: nowrap; transition: all 0.3s ease;">📅 Diciembre</a>
+        <a href="#" class="month-tab" style="color: #ccc; text-decoration: none; padding: 10px 20px; border-radius: 20px; font-size: 14px; white-space: nowrap; transition: all 0.3s ease;">📅 Enero</a>
+        <a href="#" class="month-tab" style="color: #ccc; text-decoration: none; padding: 10px 20px; border-radius: 20px; font-size: 14px; white-space: nowrap; transition: all 0.3s ease;">📅 Febrero</a>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div style="max-width: 1100px; margin: 40px auto; padding: 0 20px;">
+        
+        <!-- TÍTULO -->
+        <div style="text-align: center; margin-bottom: 35px;">
+            <h1 style="color: #fff; font-size: 42px; margin: 0 0 10px 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">📆 Calendario de Partidos</h1>
+            <p style="color: #999; font-size: 16px; margin: 0;">Próximos encuentros y eventos destacados</p>
+        </div>
+
+        <!-- LUNES 18 DE NOVIEMBRE -->
+        <div style="margin-bottom: 45px;">
+            <div style="background: linear-gradient(135deg, #5e10b1 0%, #7c3aed 100%); color: #fff; padding: 15px 20px; border-radius: 12px 12px 0 0; font-size: 20px; font-weight: bold; display: flex; align-items: center; gap: 10px; box-shadow: 0 2px 8px rgba(94,16,177,0.3);">
+                <span style="font-size: 24px;">📅</span>
+                Lunes, 18 de Noviembre
+            </div>
+
+            <!-- Partido 1 -->
+            <div class="match-card" style="background-color: #2b2b2b; padding: 20px; margin-bottom: 15px; border-radius: 0; display: flex; justify-content: space-between; align-items: center; gap: 20px; border-left: 5px solid #5e10b1; transition: all 0.3s ease;">
+                <div style="flex: 1; display: flex; align-items: center; gap: 15px;">
+                    <div style="text-align: center; min-width: 80px;">
+                        <div style="font-size: 18px; font-weight: bold; color: #fff;">20:00</div>
+                        <div style="font-size: 11px; color: #888; margin-top: 3px;">📺 TV Pública</div>
+                    </div>
+                    <div style="height: 40px; width: 1px; background-color: #444;"></div>
+                    <div style="flex: 1;">
+                        <div style="font-size: 18px; font-weight: bold; color: #fff; margin-bottom: 5px;">
+                            Mendoza Titans <span style="color: #888;">vs</span> Salta Capital
+                        </div>
+                        <div style="font-size: 13px; color: #999;">División A • Estadio Municipal de Mendoza</div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 10px; flex-shrink: 0;">
+                    <a href="#" style="background: linear-gradient(135deg, #5e10b1 0%, #7c3aed 100%); color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 8px; font-size: 13px; font-weight: bold; white-space: nowrap; box-shadow: 0 2px 6px rgba(94,16,177,0.3);">🎫 Comprar Tickets</a>
+                </div>
+            </div>
+
+            <!-- Partido 2 -->
+            <div class="match-card" style="background-color: #2b2b2b; padding: 20px; border-radius: 0 0 12px 12px; display: flex; justify-content: space-between; align-items: center; gap: 20px; border-left: 5px solid #ff9900; transition: all 0.3s ease;">
+                <div style="flex: 1; display: flex; align-items: center; gap: 15px;">
+                    <div style="text-align: center; min-width: 80px;">
+                        <div style="font-size: 18px; font-weight: bold; color: #fff;">22:30</div>
+                        <div style="font-size: 11px; color: #888; margin-top: 3px;">🎥 Streaming</div>
+                    </div>
+                    <div style="height: 40px; width: 1px; background-color: #444;"></div>
+                    <div style="flex: 1;">
+                        <div style="font-size: 18px; font-weight: bold; color: #fff; margin-bottom: 5px;">
+                            Rosario Hoops <span style="color: #888;">vs</span> Tucumán Basket
+                        </div>
+                        <div style="font-size: 13px; color: #999;">División A • Arena Rosario Central</div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 10px; flex-shrink: 0;">
+                    <a href="#" style="background-color: #ff9900; color: #000; padding: 10px 20px; text-decoration: none; border-radius: 8px; font-size: 13px; font-weight: bold; white-space: nowrap; box-shadow: 0 2px 6px rgba(255,153,0,0.3);">▶️ Ver Partido</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- JUEVES 21 DE NOVIEMBRE -->
+        <div style="margin-bottom: 45px;">
+            <div style="background: linear-gradient(135deg, #5e10b1 0%, #7c3aed 100%); color: #fff; padding: 15px 20px; border-radius: 12px 12px 0 0; font-size: 20px; font-weight: bold; display: flex; align-items: center; gap: 10px; box-shadow: 0 2px 8px rgba(94,16,177,0.3);">
+                <span style="font-size: 24px;">📅</span>
+                Jueves, 21 de Noviembre
+            </div>
+
+            <!-- Partido 3 -->
+            <div class="match-card" style="background-color: #2b2b2b; padding: 20px; border-radius: 0 0 12px 12px; display: flex; justify-content: space-between; align-items: center; gap: 20px; border-left: 5px solid #22c55e; transition: all 0.3s ease;">
+                <div style="flex: 1; display: flex; align-items: center; gap: 15px;">
+                    <div style="text-align: center; min-width: 80px;">
+                        <div style="font-size: 18px; font-weight: bold; color: #fff;">21:00</div>
+                        <div style="font-size: 11px; color: #888; margin-top: 3px;">🎥 Streaming</div>
+                    </div>
+                    <div style="height: 40px; width: 1px; background-color: #444;"></div>
+                    <div style="flex: 1;">
+                        <div style="font-size: 18px; font-weight: bold; color: #fff; margin-bottom: 5px;">
+                            Córdoba Giants <span style="color: #888;">vs</span> Salta Capital
+                        </div>
+                        <div style="font-size: 13px; color: #999;">División A • Complejo Polideportivo Córdoba</div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 10px; flex-shrink: 0;">
+                    <a href="#" style="background-color: #22c55e; color: #000; padding: 10px 20px; text-decoration: none; border-radius: 8px; font-size: 13px; font-weight: bold; white-space: nowrap; box-shadow: 0 2px 6px rgba(34,197,94,0.3);">▶️ Ver Partido</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- INFORMACIÓN ADICIONAL -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px;">
+            
+            <div style="background-color: #2b2b2b; padding: 20px; border-radius: 12px; text-align: center; border-top: 4px solid #5e10b1;">
+                <div style="font-size: 36px; margin-bottom: 10px;">🎫</div>
+                <div style="font-size: 24px; color: #5e10b1; font-weight: bold; margin-bottom: 5px;">15</div>
+                <div style="font-size: 13px; color: #999;">Partidos este mes</div>
+            </div>
+
+            <div style="background-color: #2b2b2b; padding: 20px; border-radius: 12px; text-align: center; border-top: 4px solid #ff9900;">
+                <div style="font-size: 36px; margin-bottom: 10px;">🏟️</div>
+                <div style="font-size: 24px; color: #ff9900; font-weight: bold; margin-bottom: 5px;">8</div>
+                <div style="font-size: 13px; color: #999;">Estadios activos</div>
+            </div>
+
+            <div style="background-color: #2b2b2b; padding: 20px; border-radius: 12px; text-align: center; border-top: 4px solid #22c55e;">
+                <div style="font-size: 36px; margin-bottom: 10px;">⭐</div>
+                <div style="font-size: 24px; color: #22c55e; font-weight: bold; margin-bottom: 5px;">3</div>
+                <div style="font-size: 13px; color: #999;">Partidos destacados</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer style="background: linear-gradient(135deg, #430199 0%, #6d28d9 100%); color: #fff; text-align: center; padding: 30px 20px; margin-top: 50px; border-top: 3px solid #5e10b1;">
+        <div style="max-width: 1300px; margin: 0 auto;">
+            <p style="font-size: 18px; font-weight: bold; margin: 0 0 10px 0; letter-spacing: 2px;">ELBASK</p>
+            <p style="margin: 5px 0; font-size: 14px; opacity: 0.9;">Equipos Nacionales | Básquetbol Internacional</p>
+            <div style="height: 1px; background-color: rgba(255,255,255,0.2); margin: 20px auto; max-width: 600px;"></div>
+            <p style="margin: 5px 0; font-size: 13px;">Escuela Educación Técnica 3139 "Gral. Martín Miguel de Güemes"</p>
+            <p style="margin: 5px 0; font-size: 13px;">Alumno: Yañez Nicolás | Profesor: Artaza</p>
+            <p style="margin: 15px 0 0 0; font-size: 13px;">
+                Contacto: <a href="mailto:elbask@gmail.com" style="color: #fff; text-decoration: underline;">elbask@gmail.com</a>
+            </p>
+            <p style="margin: 15px 0 0 0; font-size: 12px; opacity: 0.7;">&copy; 2025 ELBASK. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

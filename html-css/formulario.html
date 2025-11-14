@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro | ELBASK</title>
+    <meta name="description" content="Registrate en el torneo Principan de ELBASK y sé parte del básquet internacional. Completá el formulario y unite a la comunidad deportiva.">
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif; background-color: #1a1a1a; color: #cccccc;">
+
+    <!-- HEADER MEJORADO -->
+    <div style="background: linear-gradient(135deg, #4c0099 0%, #6d28d9 100%); color: #fff; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #5e10b1; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+        <div style="display: flex; align-items: center; gap: 30px;">
+            <span style="font-size: 28px; font-weight: bold; letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">ELBASK</span>
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <a href="../html-css/inicio1.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Inicio</a>
+                <a href="../html-css/partido.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Partidos</a>
+                <a href="../html-css/noticia.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Noticias</a>
+                <a href="../html-css/clasificacion.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Clasificación</a>
+                <a href="../html-css/calendario.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Calendario</a>
+                <a href="../html-css/formulario.html" style="color: #fff; padding: 8px 15px; text-decoration: none; font-size: 14px; border-radius: 5px;">Formulario</a>
+                <a href="../html-css/quienes-somos.html" style="color: #fff; padding: 8px 15px; text-decoration: none; font-size: 14px; border-radius: 5px;">Acerca de ELBASK</a>
+            </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <form action="buscar.php" method="GET" style="display: flex;">
+                <input type="text" name="q" placeholder="Buscar Noticias, Equipos..." 
+                    style="padding: 8px 15px; border: none; border-radius: 20px 0 0 20px; background-color: rgba(255,255,255,0.2); color: #fff; font-size: 14px; width: 200px;">
+                <button type="submit" style="background-color: #5e10b1; color: white; border: none; padding: 8px 12px; border-radius: 0 20px 20px 0; cursor: pointer; font-size: 14px;">🔍</button>
+            </form>
+            <a href="../php/index.php" style="color: #fff; text-decoration: none; padding: 8px 20px; background-color: #5e10b1; border-radius: 20px; font-size: 14px; font-weight: bold;">LOGIN</a>
+        </div>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div style="max-width: 1300px; margin: 40px auto; padding: 0 20px;">
+        
+        <!-- TÍTULO DE SECCIÓN -->
+        <div style="margin-bottom: 30px;">
+            <h3 style="font-size: 20px; color: #fff; margin: 0; padding-bottom: 10px; border-bottom: 3px solid #5e10b1; display: inline-block;">📝 FORMULARIO DE REGISTRO</h3>
+        </div>
+
+        <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+            
+            <!-- FORMULARIO -->
+            <div style="flex: 2; min-width: 300px;">
+                <div style="background-color: #2b2b2b; border-radius: 12px; padding: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                    <h2 style="margin: 0 0 10px; font-size: 28px; color: #fff; display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 32px;">🏀</span>
+                        Inscripción al Torneo
+                    </h2>
+                    <p style="margin: 0 0 25px; color: #999; font-size: 14px; line-height: 1.6;">Completá tus datos para participar en el torneo Principal 2025. Unite a la competencia más importante de básquet internacional.</p>
+
+                    <form action="procesar-formulario.php" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+                        
+                        <div>
+                            <label for="nombre" style="display: block; margin-bottom: 8px; color: #fff; font-size: 14px; font-weight: bold;">
+                                👤 Nombre completo:
+                            </label>
+                            <input type="text" id="nombre" name="nombre" required 
+                                style="width: 100%; padding: 12px; border-radius: 8px; border: 2px solid #333; background-color: #1a1a1a; color: #fff; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s;"
+                                onfocus="this.style.borderColor='#5e10b1'" 
+                                onblur="this.style.borderColor='#333'">
+                        </div>
+
+                        <div>
+                            <label for="email" style="display: block; margin-bottom: 8px; color: #fff; font-size: 14px; font-weight: bold;">
+                                📧 Correo electrónico:
+                            </label>
+                            <input type="email" id="email" name="email" required 
+                                style="width: 100%; padding: 12px; border-radius: 8px; border: 2px solid #333; background-color: #1a1a1a; color: #fff; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s;"
+                                onfocus="this.style.borderColor='#5e10b1'" 
+                                onblur="this.style.borderColor='#333'">
+                        </div>
+
+                        <div>
+                            <label for="pais" style="display: block; margin-bottom: 8px; color: #fff; font-size: 14px; font-weight: bold;">
+                                🌍 País:
+                            </label>
+                            <select id="pais" name="pais" required 
+                                style="width: 100%; padding: 12px; border-radius: 8px; border: 2px solid #333; background-color: #1a1a1a; color: #fff; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s; cursor: pointer;"
+                                onfocus="this.style.borderColor='#5e10b1'" 
+                                onblur="this.style.borderColor='#333'">
+                                <option value="">Seleccionar país</option>
+                                <option value="argentina">🇦🇷 Argentina</option>
+                                <option value="mexico">🇲🇽 México</option>
+                                <option value="colombia">🇨🇴 Colombia</option>
+                                <option value="chile">🇨🇱 Chile</option>
+                                <option value="espana">🇪🇸 España</option>
+                                <option value="usa">🇺🇸 Estados Unidos</option>
+                                <option value="brasil">🇧🇷 Brasil</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="mensaje" style="display: block; margin-bottom: 8px; color: #fff; font-size: 14px; font-weight: bold;">
+                                💬 Mensaje o comentario:
+                            </label>
+                            <textarea id="mensaje" name="mensaje" rows="5" 
+                                style="width: 100%; padding: 12px; border-radius: 8px; border: 2px solid #333; background-color: #1a1a1a; color: #fff; font-size: 14px; resize: vertical; box-sizing: border-box; transition: border-color 0.3s;"
+                                onfocus="this.style.borderColor='#5e10b1'" 
+                                onblur="this.style.borderColor='#333'"></textarea>
+                        </div>
+
+                        <button type="submit" 
+                            style="background: linear-gradient(135deg, #5e10b1 0%, #7c3aed 100%); color: white; padding: 14px; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 15px rgba(94,16,177,0.3);"
+                            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(94,16,177,0.4)'"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(94,16,177,0.3)'">
+                            ✅ Enviar Inscripción
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="flex: 1; min-width: 300px;">
+                
+                <!-- IMAGEN DEL TORNEO -->
+                <div style="background-color: #2b2b2b; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                    <h3 style="margin: 0 0 15px; font-size: 18px; color: #fff; display: flex; align-items: center; gap: 8px;">
+                        <span style="font-size: 20px;">🏆</span>
+                        Torneo Principan 2025
+                    </h3>
+                    <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #5e10b1 0%, #2b2b2b 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 60px; position: relative; overflow: hidden;">
+                        <span style="opacity: 0.3; position: absolute;">🏀</span>
+                    </div>
+                    <p style="margin: 15px 0 0; font-size: 13px; color: #999; line-height: 1.6;">Unite a la competencia más importante de básquet internacional. ¡No te pierdas esta oportunidad única de formar parte de la historia!</p>
+                </div>
+
+                <!-- BENEFICIOS -->
+                <div style="background-color: #2b2b2b; border-radius: 12px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                    <h3 style="margin: 0 0 15px; font-size: 18px; color: #fff; display: flex; align-items: center; gap: 8px;">
+                        <span style="font-size: 20px;">⭐</span>
+                        Beneficios
+                    </h3>
+                    <ul style="margin: 0; padding-left: 0; list-style: none; color: #ccc; font-size: 14px; line-height: 2;">
+                        <li style="padding: 8px 0; border-bottom: 1px solid #333; display: flex; align-items: center; gap: 10px;">
+                            <span style="color: #5e10b1; font-size: 18px;">✓</span>
+                            Acceso a partidos exclusivos
+                        </li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #333; display: flex; align-items: center; gap: 10px;">
+                            <span style="color: #5e10b1; font-size: 18px;">✓</span>
+                            Estadísticas en tiempo real
+                        </li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #333; display: flex; align-items: center; gap: 10px;">
+                            <span style="color: #5e10b1; font-size: 18px;">✓</span>
+                            Contenido premium
+                        </li>
+                        <li style="padding: 8px 0; display: flex; align-items: center; gap: 10px;">
+                            <span style="color: #5e10b1; font-size: 18px;">✓</span>
+                            Comunidad de fanáticos
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- ESTADÍSTICAS RÁPIDAS -->
+                <div style="background-color: #2b2b2b; border-radius: 12px; padding: 20px; margin-top: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                    <h3 style="margin: 0 0 15px; font-size: 18px; color: #fff; display: flex; align-items: center; gap: 8px;">
+                        <span style="font-size: 20px;">📊</span>
+                        Datos del Torneo
+                    </h3>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <div style="background-color: #1a1a1a; padding: 12px; border-radius: 8px; border-left: 4px solid #5e10b1;">
+                            <div style="font-size: 24px; color: #5e10b1; font-weight: bold;">32</div>
+                            <div style="font-size: 12px; color: #999;">Equipos Participantes</div>
+                        </div>
+                        <div style="background-color: #1a1a1a; padding: 12px; border-radius: 8px; border-left: 4px solid #ff9900;">
+                            <div style="font-size: 24px; color: #ff9900; font-weight: bold;">15K</div>
+                            <div style="font-size: 12px; color: #999;">Jugadores Registrados</div>
+                        </div>
+                        <div style="background-color: #1a1a1a; padding: 12px; border-radius: 8px; border-left: 4px solid #22c55e;">
+                            <div style="font-size: 24px; color: #22c55e; font-weight: bold;">$50K</div>
+                            <div style="font-size: 12px; color: #999;">Premio Total</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER MEJORADO -->
+    <footer style="background: linear-gradient(135deg, #430199 0%, #6d28d9 100%); color: #fff; text-align: center; padding: 30px 20px; margin-top: 50px; border-top: 3px solid #5e10b1;">
+        <div style="max-width: 1300px; margin: 0 auto;">
+            <p style="font-size: 18px; font-weight: bold; margin: 0 0 10px 0; letter-spacing: 2px;">ELBASK</p>
+            <p style="margin: 5px 0; font-size: 14px; opacity: 0.9;">Equipos Nacionales | Básquetbol Internacional</p>
+            <div style="height: 1px; background-color: rgba(255,255,255,0.2); margin: 20px auto; max-width: 600px;"></div>
+            <p style="margin: 5px 0; font-size: 13px;">Escuela Educación Técnica 3139 "Gral. Martín Miguel de Güemes"</p>
+            <p style="margin: 5px 0; font-size: 13px;">Alumno: Yañez Nicolás | Profesor: Artaza</p>
+            <p style="margin: 15px 0 0 0; font-size: 13px;">
+                Contacto: <a href="mailto:elbask@gmail.com" style="color: #fff; text-decoration: underline;">elbask@gmail.com</a>
+            </p>
+            <p style="margin: 15px 0 0 0; font-size: 12px; opacity: 0.7;">&copy; 2025 ELBASK. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

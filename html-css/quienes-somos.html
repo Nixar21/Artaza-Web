@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELBASK - Quiénes Somos</title>
+    <meta name="description" content="Conoce la historia, misión y visión de ELBASK, la plataforma digital dedicada al básquet internacional creada por estudiantes apasionados.">
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif; background-color: #1a1a1a; color: #cccccc;">
+    <!-- HEADER MEJORADO -->
+    <div style="background: linear-gradient(135deg, #4c0099 0%, #6d28d9 100%); color: #fff; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #5e10b1; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+        <div style="display: flex; align-items: center; gap: 30px;">
+            <span style="font-size: 28px; font-weight: bold; letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">ELBASK</span>
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <a href="../html-css/inicio1.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Inicio</a>
+                <a href="../html-css/partido.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Partidos</a>
+                <a href="../html-css/noticia.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Noticias</a>
+                <a href="../html-css/clasificacion.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Clasificación</a>
+                <a href="../html-css/calendario.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Calendario</a>
+                <a href="../html-css/formulario.html" style="color: #fff; padding: 8px 15px; text-decoration: none; font-size: 14px; border-radius: 5px;">Formulario</a>
+                <a href="../html-css/quienes-somos.html" style="color: #fff; padding: 8px 15px; text-decoration: none; font-size: 14px; border-radius: 5px;">Acerca de ELBASK</a>
+            </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <form action="buscar.php" method="GET" style="display: flex;">
+                <input type="text" name="q" placeholder="Buscar Noticias, Equipos..." 
+                    style="padding: 8px 15px; border: none; border-radius: 20px 0 0 20px; background-color: rgba(255,255,255,0.2); color: #fff; font-size: 14px; width: 200px;">
+                <button type="submit" style="background-color: #5e10b1; color: white; border: none; padding: 8px 12px; border-radius: 0 20px 20px 0; cursor: pointer; font-size: 14px;">🔍</button>
+            </form>
+            <a href="../php/index.php" style="color: #fff; text-decoration: none; padding: 8px 20px; background-color: #5e10b1; border-radius: 20px; font-size: 14px; font-weight: bold;">LOGIN</a>
+        </div>
+    </div>
+    <!-- Main Container -->
+    <div style="max-width: 1000px; margin: 30px auto; padding: 0 20px;">
+        
+        <!-- Page Title -->
+        <div style="background: linear-gradient(135deg, #5e10b1 0%, #7c3aed 100%); color: #fff; padding: 35px 40px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(94,16,177,0.3); text-align: center;">
+            <h1 style="font-size: 40px; margin: 0 0 12px 0; font-weight: bold; letter-spacing: 1px;">🏀 Acerca de ELBASK</h1>
+            <p style="margin: 0; font-size: 16px; opacity: 0.9;">Conectando el básquetbol con la tecnología</p>
+        </div>
+
+        <!-- Tab Navigation -->
+        <div style="background-color: #2b2b2b; padding: 15px 25px; display: flex; gap: 15px; align-items: center; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.3); overflow-x: auto; flex-wrap: wrap;">
+            <a href="#" style="background: linear-gradient(135deg, #5e10b1 0%, #7c3aed 100%); color: #fff; text-decoration: none; padding: 8px 18px; border-radius: 6px; font-size: 14px; font-weight: bold; white-space: nowrap; box-shadow: 0 2px 8px rgba(94,16,177,0.3);">Quiénes Somos</a>
+            <a href="../html-css/preguntas-frecuentes.html" style="color: #ccc; text-decoration: none; padding: 8px 18px; border-radius: 6px; font-size: 14px; white-space: nowrap; transition: all 0.3s ease;">Preguntas Frecuentes</a>
+            <a href="../html-css/cv.html" style="color: #ccc; text-decoration: none; padding: 8px 18px; border-radius: 6px; font-size: 14px; white-space: nowrap; transition: all 0.3s ease;">CV</a>
+            <a href="../html-css/blog.html" style="color: #ccc; text-decoration: none; padding: 8px 18px; border-radius: 6px; font-size: 14px; white-space: nowrap; transition: all 0.3s ease;">Blog</a>
+        </div>
+
+        <!-- Main Content -->
+        <div style="background-color: #2b2b2b; border-radius: 12px; padding: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+            
+            <!-- Our Story Section -->
+            <section style="margin-bottom: 40px;">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                    <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #5e10b1 0%, #7c3aed 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 4px 12px rgba(94,16,177,0.4);">📖</div>
+                    <h2 style="color: #ffeb3b; font-size: 28px; margin: 0;">Nuestra Historia</h2>
+                </div>
+                <p style="font-size: 16px; line-height: 1.8; color: #ddd; background-color: #3b3b3b; padding: 25px; border-radius: 10px; border-left: 4px solid #5e10b1;">
+                    Somos un equipo de estudiantes, desarrolladores y fanáticos del básquet que decidimos crear <strong style="color: #ffeb3b;">ELBASK</strong>: una plataforma para conectar el deporte con la tecnología. Nacimos de la necesidad de tener un espacio digital dedicado y accesible para el baloncesto regional y nacional, donde los aficionados puedan encontrar toda la información que necesitan en un solo lugar.
+                </p>
+            </section>
+
+            <!-- Mission & Vision Cards -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 40px;">
+                
+                <!-- Mission Card -->
+                <article style="background: linear-gradient(135deg, #3b3b3b 0%, #2b2b2b 100%); padding: 30px; border-radius: 12px; border-left: 5px solid #5e10b1; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: all 0.3s ease;">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+                        <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #5e10b1 0%, #7c3aed 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; box-shadow: 0 2px 8px rgba(94,16,177,0.4);">🎯</div>
+                        <h3 style="color: #5e10b1; font-size: 22px; margin: 0; font-weight: bold;">Misión</h3>
+                    </div>
+                    <p style="font-size: 15px; line-height: 1.7; margin: 0; color: #ddd;">Promover el básquet nacional e internacional a través de herramientas digitales accesibles, educativas y entretenidas, acercando la información a toda la comunidad deportiva.</p>
+                </article>
+                
+                <!-- Vision Card -->
+                <article style="background: linear-gradient(135deg, #3b3b3b 0%, #2b2b2b 100%); padding: 30px; border-radius: 12px; border-left: 5px solid #7c3aed; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: all 0.3s ease;">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+                        <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; box-shadow: 0 2px 8px rgba(124,58,237,0.4);">🚀</div>
+                        <h3 style="color: #7c3aed; font-size: 22px; margin: 0; font-weight: bold;">Visión</h3>
+                    </div>
+                    <p style="font-size: 15px; line-height: 1.7; margin: 0; color: #ddd;">Convertirnos en un referente digital del deporte en Latinoamérica, integrando estadísticas, formación y comunidad en una sola plataforma innovadora y de clase mundial.</p>
+                </article>
+            </div>
+
+            <!-- Main Project Section -->
+            <section style="background: linear-gradient(135deg, #38006d 0%, #5e10b1 100%); padding: 35px; border-radius: 12px; margin-bottom: 40px; box-shadow: 0 4px 15px rgba(94,16,177,0.4); border: 2px solid #7c3aed;">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 2px solid rgba(255,255,255,0.2);">
+                    <div style="font-size: 36px;">🏆</div>
+                    <h3 style="color: #fff; font-size: 26px; margin: 0; font-weight: bold;">El Proyecto Principan</h3>
+                </div>
+                <p style="font-size: 16px; line-height: 1.8; margin: 0; color: #fff;">
+                    <strong style="color: #ffeb3b;">Principan</strong> es nuestro torneo insignia. Está diseñado para destacar jóvenes talentos y fomentar el espíritu deportivo en la región. Cada sección y herramienta que encuentras en ELBASK está pensada para acompañar y darle visibilidad a este valioso proyecto que busca revolucionar el básquetbol juvenil.
+                </p>
+                <div style="margin-top: 20px; display: flex; gap: 15px; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 150px; background-color: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 28px; color: #ffeb3b; font-weight: bold; margin-bottom: 5px;">100+</div>
+                        <div style="font-size: 13px; color: #ddd;">Equipos Participantes</div>
+                    </div>
+                    <div style="flex: 1; min-width: 150px; background-color: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 28px; color: #ffeb3b; font-weight: bold; margin-bottom: 5px;">500+</div>
+                        <div style="font-size: 13px; color: #ddd;">Jugadores Registrados</div>
+                    </div>
+                    <div style="flex: 1; min-width: 150px; background-color: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 28px; color: #ffeb3b; font-weight: bold; margin-bottom: 5px;">15</div>
+                        <div style="font-size: 13px; color: #ddd;">Países Representados</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Values Section -->
+            <section style="margin-bottom: 40px;">
+                <h3 style="color: #ffeb3b; font-size: 24px; margin: 0 0 25px 0; text-align: center;">💎 Nuestros Valores</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <div style="background-color: #3b3b3b; padding: 25px 20px; border-radius: 10px; text-align: center; border-top: 4px solid #5e10b1; transition: all 0.3s ease;">
+                        <div style="font-size: 36px; margin-bottom: 12px;">🤝</div>
+                        <h4 style="color: #fff; font-size: 16px; margin: 0 0 8px 0; font-weight: bold;">Comunidad</h4>
+                        <p style="font-size: 13px; color: #aaa; margin: 0; line-height: 1.5;">Construimos juntos una red apasionada</p>
+                    </div>
+
+                    <div style="background-color: #3b3b3b; padding: 25px 20px; border-radius: 10px; text-align: center; border-top: 4px solid #7c3aed; transition: all 0.3s ease;">
+                        <div style="font-size: 36px; margin-bottom: 12px;">💡</div>
+                        <h4 style="color: #fff; font-size: 16px; margin: 0 0 8px 0; font-weight: bold;">Innovación</h4>
+                        <p style="font-size: 13px; color: #aaa; margin: 0; line-height: 1.5;">Tecnología al servicio del deporte</p>
+                    </div>
+
+                    <div style="background-color: #3b3b3b; padding: 25px 20px; border-radius: 10px; text-align: center; border-top: 4px solid #ff9900; transition: all 0.3s ease;">
+                        <div style="font-size: 36px; margin-bottom: 12px;">⚡</div>
+                        <h4 style="color: #fff; font-size: 16px; margin: 0 0 8px 0; font-weight: bold;">Pasión</h4>
+                        <p style="font-size: 13px; color: #aaa; margin: 0; line-height: 1.5;">El amor por el básquetbol nos impulsa</p>
+                    </div>
+
+                    <div style="background-color: #3b3b3b; padding: 25px 20px; border-radius: 10px; text-align: center; border-top: 4px solid #22c55e; transition: all 0.3s ease;">
+                        <div style="font-size: 36px; margin-bottom: 12px;">🎓</div>
+                        <h4 style="color: #fff; font-size: 16px; margin: 0 0 8px 0; font-weight: bold;">Educación</h4>
+                        <p style="font-size: 13px; color: #aaa; margin: 0; line-height: 1.5;">Formación continua para todos</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Team Image Section -->
+            <figure style="margin: 40px 0 0 0; text-align: center;">
+                <div style="background: linear-gradient(135deg, #38006d 0%, #5e10b1 100%); padding: 80px 40px; border-radius: 12px; position: relative; overflow: hidden; box-shadow: 0 4px 15px rgba(94,16,177,0.3);">
+                    <div style="font-size: 64px; opacity: 0.2; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">🏀</div>
+                    <div style="position: relative; z-index: 1;">
+                        <div style="font-size: 48px; margin-bottom: 15px;">👥</div>
+                        <p style="color: #fff; font-size: 20px; margin: 0; font-weight: bold;">Nuestro Equipo</p>
+                        <p style="color: #ddd; font-size: 14px; margin: 10px 0 0 0;">Trabajando juntos por el futuro del básquetbol</p>
+                    </div>
+                </div>
+                <figcaption style="color: #999; margin-top: 15px; font-size: 14px; font-style: italic;">
+                    Nuestro equipo trabajando en el diseño y desarrollo de la plataforma ELBASK.
+                </figcaption>
+            </figure>
+
+            <!-- CTA Section -->
+            <div style="margin-top: 40px; background: linear-gradient(135deg, #2b2b2b 0%, #3b3b3b 100%); padding: 30px; border-radius: 12px; text-align: center; border: 2px solid #5e10b1;">
+                <h4 style="color: #ffeb3b; font-size: 22px; margin: 0 0 15px 0;">¿Querés ser parte de ELBASK?</h4>
+                <p style="color: #ddd; font-size: 15px; margin: 0 0 20px 0; line-height: 1.6;">Unite a nuestra comunidad y descubrí todo lo que tenemos para ofrecerte</p>
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <a href="../formulario.html" style="display: inline-block; background: linear-gradient(135deg, #5e10b1 0%, #7c3aed 100%); color: #fff; text-decoration: none; padding: 12px 30px; border-radius: 25px; font-size: 15px; font-weight: bold; box-shadow: 0 4px 12px rgba(94,16,177,0.3); transition: all 0.3s ease;">
+                        📝 Registrarse
+                    </a>
+                    <a href="../partido.html" style="display: inline-block; background-color: #3b3b3b; color: #fff; text-decoration: none; padding: 12px 30px; border-radius: 25px; font-size: 15px; font-weight: bold; border: 2px solid #5e10b1; transition: all 0.3s ease;">
+                        🏀 Ver Partidos
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background: linear-gradient(135deg, #430199 0%, #6d28d9 100%); color: #fff; text-align: center; padding: 30px 20px; margin-top: 50px; border-top: 3px solid #5e10b1;">
+        <div style="max-width: 1300px; margin: 0 auto;">
+            <p style="font-size: 18px; font-weight: bold; letter-spacing: 2px; margin: 0 0 10px 0;">ELBASK</p>
+            <p style="font-size: 14px; opacity: 0.9; margin: 5px 0;">Quiénes Somos | Básquetbol Internacional</p>
+            <div style="height: 1px; background-color: rgba(255,255,255,0.2); margin: 20px auto; max-width: 600px;"></div>
+            <p style="font-size: 13px; margin: 5px 0;">Escuela Educación Técnica 3139 "Gral. Martín Miguel de Güemes"</p>
+            <p style="font-size: 13px; margin: 5px 0;">Alumno: Yañez Nicolás | Profesor: Artaza</p>
+            <p style="margin: 15px 0 0 0; font-size: 13px;">
+                Contacto: <a href="mailto:elbask@gmail.com" style="color: #fff; text-decoration: underline;">elbask@gmail.com</a>
+            </p>
+            <p style="margin: 15px 0 0 0; font-size: 12px; opacity: 0.7;">&copy; 2025 ELBASK. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

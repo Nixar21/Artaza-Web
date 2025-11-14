@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELBASK - Preguntas Frecuentes</title>
+    <meta name="description" content="Resolvé tus dudas sobre ELBASK y el torneo Principan: cómo registrarte, ver partidos, participar y contactar al equipo. Todo lo que necesitás saber.">
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif; background-color: #1a1a1a; color: #cccccc;">
+
+    <!-- HEADER MEJORADO -->
+    <div style="background: linear-gradient(135deg, #4c0099 0%, #6d28d9 100%); color: #fff; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #5e10b1; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+        <div style="display: flex; align-items: center; gap: 30px;">
+            <span style="font-size: 28px; font-weight: bold; letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">ELBASK</span>
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <a href="../html-css/inicio1.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Inicio</a>
+                <a href="../html-css/partido.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Partidos</a>
+                <a href="../html-css/noticia.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Noticias</a>
+                <a href="../html-css/clasificacion.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Clasificación</a>
+                <a href="../html-css/calendario.html" style="color: #fff; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Calendario</a>
+                <a href="../html-css/formulario.html" style="color: #fff; padding: 8px 15px; text-decoration: none; font-size: 14px; border-radius: 5px;">Formulario</a>
+                <a href="../html-css/quienes-somos.html" style="color: #fff; padding: 8px 15px; text-decoration: none; font-size: 14px; border-radius: 5px;">Acerca de ELBASK</a>
+            </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <form action="buscar.php" method="GET" style="display: flex;">
+                <input type="text" name="q" placeholder="Buscar Noticias, Equipos..." 
+                    style="padding: 8px 15px; border: none; border-radius: 20px 0 0 20px; background-color: rgba(255,255,255,0.2); color: #fff; font-size: 14px; width: 200px;">
+                <button type="submit" style="background-color: #5e10b1; color: white; border: none; padding: 8px 12px; border-radius: 0 20px 20px 0; cursor: pointer; font-size: 14px;">🔍</button>
+            </form>
+            <a href="../php/index.php" style="color: #fff; text-decoration: none; padding: 8px 20px; background-color: #5e10b1; border-radius: 20px; font-size: 14px; font-weight: bold;">LOGIN</a>
+        </div>
+    </div>
+    <!-- Main Container -->
+    <div style="max-width: 1000px; margin: 30px auto; padding: 0 20px;">
+        
+        <!-- Page Title -->
+        <div style="background: linear-gradient(135deg, #5e10b1 0%, #7c3aed 100%); color: #fff; padding: 30px 35px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(94,16,177,0.3); text-align: center;">
+            <h1 style="font-size: 36px; margin: 0 0 10px 0; font-weight: bold; letter-spacing: 1px;">❓ Preguntas Frecuentes</h1>
+            <p style="margin: 0; font-size: 15px; opacity: 0.9;">Encuentra respuestas a las dudas más comunes sobre ELBASK</p>
+        </div>
+
+        <!-- Tab Navigation -->
+        <div style="background-color: #2b2b2b; padding: 15px 25px; display: flex; gap: 15px; align-items: center; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.3); overflow-x: auto; flex-wrap: wrap;">
+            <a href="../html-css/quienes-somos.html" style="color: #ccc; text-decoration: none; padding: 8px 18px; border-radius: 6px; font-size: 14px; white-space: nowrap; transition: all 0.3s ease;">Quiénes Somos</a>
+            <a href="../html-css/preguntas-frecuentes.html" style="background: linear-gradient(135deg, #5e10b1 0%, #7c3aed 100%); color: #fff; text-decoration: none; padding: 8px 18px; border-radius: 6px; font-size: 14px; font-weight: bold; white-space: nowrap; box-shadow: 0 2px 8px rgba(94,16,177,0.3);">Preguntas Frecuentes</a>
+            <a href="../html-css/cv.html" style="color: #ccc; text-decoration: none; padding: 8px 18px; border-radius: 6px; font-size: 14px; white-space: nowrap; transition: all 0.3s ease;">CV</a>
+            <a href="../html-css/blog.html" style="color: #ccc; text-decoration: none; padding: 8px 18px; border-radius: 6px; font-size: 14px; white-space: nowrap; transition: all 0.3s ease;">Blog</a>
+        </div>
+
+        <!-- FAQ Section -->
+        <div style="background-color: #2b2b2b; border-radius: 12px; padding: 35px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+            
+            <!-- FAQ Item 1 -->
+            <article style="margin-bottom: 30px; padding: 25px; background: linear-gradient(135deg, #3b3b3b 0%, #2b2b2b 100%); border-radius: 10px; border-left: 4px solid #5e10b1; box-shadow: 0 2px 8px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                <div style="display: flex; align-items: flex-start; gap: 15px;">
+                    <div style="min-width: 40px; height: 40px; background: linear-gradient(135deg, #5e10b1 0%, #7c3aed 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: bold; font-size: 18px; box-shadow: 0 2px 8px rgba(94,16,177,0.4);">Q</div>
+                    <div style="flex: 1;">
+                        <h3 style="color: #ffeb3b; font-size: 20px; margin: 0 0 12px 0; font-weight: bold;">¿Qué es ELBASK?</h3>
+                        <p style="font-size: 15px; line-height: 1.7; margin: 0; color: #ddd;">ELBASK es una plataforma digital dedicada al básquet internacional, con información sobre equipos, torneos, jugadores y formación técnica, creado por un equipo de estudiantes apasionados por el deporte.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- FAQ Item 2 -->
+            <article style="margin-bottom: 30px; padding: 25px; background: linear-gradient(135deg, #3b3b3b 0%, #2b2b2b 100%); border-radius: 10px; border-left: 4px solid #7c3aed; box-shadow: 0 2px 8px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                <div style="display: flex; align-items: flex-start; gap: 15px;">
+                    <div style="min-width: 40px; height: 40px; background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: bold; font-size: 18px; box-shadow: 0 2px 8px rgba(124,58,237,0.4);">Q</div>
+                    <div style="flex: 1;">
+                        <h3 style="color: #ffeb3b; font-size: 20px; margin: 0 0 12px 0; font-weight: bold;">¿Qué es el torneo Principan?</h3>
+                        <p style="font-size: 15px; line-height: 1.7; margin: 0; color: #ddd;">Principan es un torneo organizado por ELBASK que reúne a jóvenes talentos del básquet en distintas regiones del mundo, fomentando el espíritu deportivo y la competencia sana entre equipos emergentes.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- FAQ Item 3 -->
+            <article style="margin-bottom: 30px; padding: 25px; background: linear-gradient(135deg, #3b3b3b 0%, #2b2b2b 100%); border-radius: 10px; border-left: 4px solid #ff9900; box-shadow: 0 2px 8px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                <div style="display: flex; align-items: flex-start; gap: 15px;">
+                    <div style="min-width: 40px; height: 40px; background: linear-gradient(135deg, #ff9900 0%, #ff6600 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: bold; font-size: 18px; box-shadow: 0 2px 8px rgba(255,153,0,0.4);">Q</div>
+                    <div style="flex: 1;">
+                        <h3 style="color: #ffeb3b; font-size: 20px; margin: 0 0 12px 0; font-weight: bold;">¿Cómo puedo registrarme para participar o usar la plataforma?</h3>
+                        <p style="font-size: 15px; line-height: 1.7; margin: 0 0 12px 0; color: #ddd;">Para participar en torneos o registrarte en la plataforma, completá el formulario de inscripción. Recibirás una confirmación por correo electrónico con los próximos pasos.</p>
+                        <a href="../formulario.html" style="display: inline-block; background: linear-gradient(135deg, #5e10b1 0%, #7c3aed 100%); color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-size: 13px; font-weight: bold; box-shadow: 0 2px 8px rgba(94,16,177,0.3); transition: all 0.3s ease;">
+                            📝 Ir al Formulario →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- FAQ Item 4 -->
+            <article style="margin-bottom: 30px; padding: 25px; background: linear-gradient(135deg, #3b3b3b 0%, #2b2b2b 100%); border-radius: 10px; border-left: 4px solid #22c55e; box-shadow: 0 2px 8px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                <div style="display: flex; align-items: flex-start; gap: 15px;">
+                    <div style="min-width: 40px; height: 40px; background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: bold; font-size: 18px; box-shadow: 0 2px 8px rgba(34,197,94,0.4);">Q</div>
+                    <div style="flex: 1;">
+                        <h3 style="color: #ffeb3b; font-size: 20px; margin: 0 0 12px 0; font-weight: bold;">¿Dónde puedo ver los resultados de los partidos?</h3>
+                        <p style="font-size: 15px; line-height: 1.7; margin: 0 0 12px 0; color: #ddd;">En la sección de Partidos encontrarás los resultados actualizados de los torneos y ligas, incluyendo marcador final, estadísticas clave y análisis de cada encuentro.</p>
+                        <a href="../partido.html" style="display: inline-block; background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-size: 13px; font-weight: bold; box-shadow: 0 2px 8px rgba(34,197,94,0.3); transition: all 0.3s ease;">
+                            🏀 Ver Partidos →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- FAQ Item 5 -->
+            <article style="margin-bottom: 30px; padding: 25px; background: linear-gradient(135deg, #3b3b3b 0%, #2b2b2b 100%); border-radius: 10px; border-left: 4px solid #ef4444; box-shadow: 0 2px 8px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                <div style="display: flex; align-items: flex-start; gap: 15px;">
+                    <div style="min-width: 40px; height: 40px; background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: bold; font-size: 18px; box-shadow: 0 2px 8px rgba(239,68,68,0.4);">Q</div>
+                    <div style="flex: 1;">
+                        <h3 style="color: #ffeb3b; font-size: 20px; margin: 0 0 12px 0; font-weight: bold;">¿Cómo contacto al equipo de ELBASK?</h3>
+                        <p style="font-size: 15px; line-height: 1.7; margin: 0 0 12px 0; color: #ddd;">Podés escribirnos directamente a nuestro correo electrónico o usar el formulario de contacto dedicado. Nuestro equipo responde en un plazo de 24-48 horas hábiles.</p>
+                        <div style="background-color: #3b3b3b; padding: 15px; border-radius: 8px; border: 2px solid #5e10b1;">
+                            <p style="margin: 0; font-size: 14px; color: #999;">📧 Correo electrónico:</p>
+                            <p style="margin: 5px 0 0 0; font-size: 16px; color: #5e10b1; font-weight: bold;">elbask@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Additional Info Box -->
+            <div style="background: linear-gradient(135deg, #38006d 0%, #5e10b1 100%); padding: 30px; border-radius: 12px; text-align: center; margin-top: 40px; box-shadow: 0 4px 15px rgba(94,16,177,0.3);">
+                <div style="font-size: 48px; margin-bottom: 15px;">💡</div>
+                <h3 style="color: #fff; font-size: 22px; margin: 0 0 10px 0; font-weight: bold;">¿Necesitás más ayuda?</h3>
+                <p style="color: #ddd; font-size: 15px; margin: 0 0 20px 0; line-height: 1.6;">Si tu pregunta no está aquí, no dudes en contactarnos. Estamos para ayudarte a formar parte de la comunidad ELBASK.</p>
+                <a href="../formulario.html" style="display: inline-block; background-color: #fff; color: #5e10b1; text-decoration: none; padding: 12px 30px; border-radius: 25px; font-size: 15px; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: all 0.3s ease;">
+                    📨 Contactar Soporte
+                </a>
+            </div>
+
+            <!-- Quick Links -->
+            <div style="margin-top: 40px; padding: 25px; background-color: #3b3b3b; border-radius: 10px; border: 2px solid #5e10b1;">
+                <h4 style="color: #ffeb3b; font-size: 18px; margin: 0 0 20px 0; text-align: center;">🔗 Enlaces Rápidos</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                    <a href="../partido.html" style="background-color: #2b2b2b; color: #fff; text-decoration: none; padding: 15px; border-radius: 8px; text-align: center; transition: all 0.3s ease; border: 2px solid transparent; display: block;">
+                        <div style="font-size: 24px; margin-bottom: 8px;">🏀</div>
+                        <div style="font-weight: bold;">Partidos</div>
+                    </a>
+                    <a href="../clasificacion.html" style="background-color: #2b2b2b; color: #fff; text-decoration: none; padding: 15px; border-radius: 8px; text-align: center; transition: all 0.3s ease; border: 2px solid transparent; display: block;">
+                        <div style="font-size: 24px; margin-bottom: 8px;">🏆</div>
+                        <div style="font-weight: bold;">Clasificación</div>
+                    </a>
+                    <a href="../noticia.html" style="background-color: #2b2b2b; color: #fff; text-decoration: none; padding: 15px; border-radius: 8px; text-align: center; transition: all 0.3s ease; border: 2px solid transparent; display: block;">
+                        <div style="font-size: 24px; margin-bottom: 8px;">📰</div>
+                        <div style="font-weight: bold;">Noticias</div>
+                    </a>
+                    <a href="../calendario.html" style="background-color: #2b2b2b; color: #fff; text-decoration: none; padding: 15px; border-radius: 8px; text-align: center; transition: all 0.3s ease; border: 2px solid transparent; display: block;">
+                        <div style="font-size: 24px; margin-bottom: 8px;">📅</div>
+                        <div style="font-weight: bold;">Calendario</div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background: linear-gradient(135deg, #430199 0%, #6d28d9 100%); color: #fff; text-align: center; padding: 30px 20px; margin-top: 50px; border-top: 3px solid #5e10b1;">
+        <div style="max-width: 1300px; margin: 0 auto;">
+            <p style="font-size: 18px; font-weight: bold; letter-spacing: 2px; margin: 0 0 10px 0;">ELBASK</p>
+            <p style="font-size: 14px; opacity: 0.9; margin: 5px 0;">Preguntas Frecuentes | Básquetbol Internacional</p>
+            <div style="height: 1px; background-color: rgba(255,255,255,0.2); margin: 20px auto; max-width: 600px;"></div>
+            <p style="font-size: 13px; margin: 5px 0;">Escuela Educación Técnica 3139 "Gral. Martín Miguel de Güemes"</p>
+            <p style="font-size: 13px; margin: 5px 0;">Alumno: Yañez Nicolás | Profesor: Artaza</p>
+            <p style="margin: 15px 0 0 0; font-size: 13px;">
+                Contacto: <a href="mailto:elbask@gmail.com" style="color: #fff; text-decoration: underline;">elbask@gmail.com</a>
+            </p>
+            <p style="margin: 15px 0 0 0; font-size: 12px; opacity: 0.7;">&copy; 2025 ELBASK. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
