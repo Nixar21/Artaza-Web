@@ -4,7 +4,7 @@ if ($_SESSION['rol'] !== "administrador") {
     header("Location: ../php/index.php");
     exit;
 }
-include '../php/conexion.php';
+include 'conexion.php';
 
 $id = $_GET['id'];
 $sql = $conn->prepare("SELECT * FROM usuario WHERE id = ?");
@@ -28,7 +28,7 @@ $data = $sql->get_result()->fetch_assoc();
             Editar Usuario
         </h1>
 
-        <form method="POST" action="../php/editar_usuario.php">
+        <form method="POST" action="editar_usuario_proceso.php">
             <input type="hidden" name="id" value="<?= $data['id'] ?>">
 
             <label for="nombre" style="display: block; text-align: left; margin-top: 20px; font-weight: bold; color: #fff; font-size: 14px;">NOMBRE:</label>
@@ -52,7 +52,7 @@ $data = $sql->get_result()->fetch_assoc();
         </form>
 
         <div style="text-align: center; margin-top: 20px;">
-            <a href="../php/lista_usuario.php" style="color: #6d28d9; text-decoration: none; font-size: 14px; font-weight: bold;">
+            <a href="lista_usuario.php" style="color: #6d28d9; text-decoration: none; font-size: 14px; font-weight: bold;">
                 &larr; Volver a la lista
             </a>
         </div>

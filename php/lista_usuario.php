@@ -4,7 +4,7 @@ if (!isset($_SESSION['usuario']) || $_SESSION['rol'] !== "administrador") {
     header("Location: ../php/index.php");
     exit;
 }
-include '../php/conexion.php';
+include 'conexion.php';
 $result = $conn->query("SELECT * FROM usuario");
 ?>
 
@@ -30,7 +30,7 @@ $result = $conn->query("SELECT * FROM usuario");
         <div style="max-width: 1000px; margin: 0 auto;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
                 <h1 style="color: #fff; font-size: 32px; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Lista de Usuarios</h1>
-                <a href="../php/agregar_usuario.php" 
+                <a href="agregar_usuario.php" 
                 style="padding: 12px 25px; background: linear-gradient(135deg, #10b981 0%, #22c55e 100%); color:white; text-decoration:none; border-radius:8px; font-weight: bold; font-size: 14px; box-shadow: 0 4px 10px rgba(34,197,94,0.3);">
                 + Agregar Usuario
                 </a>

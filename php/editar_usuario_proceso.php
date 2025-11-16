@@ -5,7 +5,7 @@ if ($_SESSION['rol'] !== "administrador") {
     exit;
 }
 
-include '../php/conexion.php';
+include 'conexion.php';
 
 $id = $_POST['id'];
 $nombre = $_POST['nombre'];
@@ -21,6 +21,6 @@ if (!empty($_POST['contraseña'])) {
 }
 
 $sql->execute();
-header("Location: ../php/lista_usuario.php");
+header("Location: lista_usuario.php");
 exit;
 ?>
