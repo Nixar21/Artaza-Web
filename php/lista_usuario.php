@@ -53,8 +53,8 @@ $result = $conn->query("SELECT * FROM usuario");
                             <td style="padding: 15px 20px; font-weight: bold; color: #fff;"><?= htmlspecialchars($row['nombre']) ?></td>
                             <td style="padding: 15px 20px;"><?= htmlspecialchars($row['rol']) ?></td>
                             <td style="padding: 15px 20px; text-align: center;">
-                                <a href="../php/editar_usuario.php?id=<?= $row['id'] ?>" style="color: #fff; background-color: #ff9900; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: bold; margin-right: 10px;">Editar</a>
-                                <a href="../php/eliminar_usuario.php?id=<?= $row['id'] ?>" 
+                                <a href="editar_usuario.php?id=<?= $row['id'] ?>" style="color: #fff; background-color: #ff9900; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: bold; margin-right: 10px;">Editar</a>
+                                <a href="eliminar_usuario.php?id=<?= $row['id'] ?>" 
                                     onclick="return confirm('¿Seguro que quieres eliminar este usuario?')" 
                                     style="color: #fff; background-color: #ef4444; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: bold;">
                                     Eliminar
