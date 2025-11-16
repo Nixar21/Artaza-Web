@@ -1,7 +1,7 @@
 <?php
 session_start();
 if ($_SESSION['rol'] !== "administrador") {
-    header("Location: ../php/index.php");
+    header("Location: ../php/lista_usuario.php");
     exit;
 }
 
