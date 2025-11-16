@@ -6,7 +6,11 @@ if (!isset($_SESSION['usuario']) || $_SESSION['rol'] !== "administrador") {
 }
 include 'conexion.php';
 
-$result = $conn->query("SELECT id, nombre, rol FROM usuario");
+$result = $conn->query("SELECT * FROM usuario");
+
+if (!$result) {
+    die("Error en la consulta: " . $conn->error);
+}
 ?>
 
 <!DOCTYPE html>
@@ -49,11 +53,11 @@ $result = $conn->query("SELECT id, nombre, rol FROM usuario");
                     </thead>
                     <tbody>
                         <?php 
-                        if ($result->num_rows > 0) {
+                        if ($result && $result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) { 
                         ?>
                         <tr style="border-bottom: 1px solid #444;">
-                            <td style="padding: 15px 20px;"><?php echo $row['id']; ?></td>
+                            <td style="padding: 15px 20px;"><?php echo $row['id_usuario']; ?></td>
                             <td style="padding: 15px 20px; font-weight: bold; color: #fff;"><?php echo htmlspecialchars($row['nombre']); ?></td>
                             <td style="padding: 15px 20px;">
                                 <?php 
@@ -65,8 +69,8 @@ $result = $conn->query("SELECT id, nombre, rol FROM usuario");
                                 ?>
                             </td>
                             <td style="padding: 15px 20px; text-align: center;">
-                                <a href="editar_usuario.php?id=<?php echo $row['id']; ?>" style="color: #fff; background-color: #ff9900; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: bold; margin-right: 10px; display: inline-block;">Editar</a>
-                                <a href="eliminar_usuario.php?id=<?php echo $row['id']; ?>" 
+                                <a href="editar_usuario.php?id=<?php echo $row['id_usuario']; ?>" style="color: #fff; background-color: #ff9900; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: bold; margin-right: 10px; display: inline-block;">Editar</a>
+                                <a href="eliminar_usuario.php?id=<?php echo $row['id_usuario']; ?>" 
                                     onclick="return confirm('¿Seguro que quieres eliminar este usuario?')" 
                                     style="color: #fff; background-color: #ef4444; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: bold; display: inline-block;">
                                     Eliminar

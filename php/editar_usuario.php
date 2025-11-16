@@ -1,16 +1,32 @@
 <?php
 session_start();
-if ($_SESSION['rol'] !== "administrador") {
-    header("Location: lista_usuario.php");
+if (!isset($_SESSION['usuario']) || $_SESSION['rol'] !== "administrador") {
+    header("Location: index.php");
     exit;
 }
 include 'conexion.php';
 
+// Verificar que el ID viene por GET
+if (!isset($_GET['id']) || empty($_GET['id'])) {
+    die("Error: No se especificó un usuario para editar");
+}
+
 $id = $_GET['id'];
-$sql = $conn->prepare("SELECT * FROM usuario WHERE id = ?");
+
+// Obtener el nombre de la columna ID dinámicamente
+$field_info = $conn->query("DESCRIBE usuario");
+$id_column = $field_info->fetch_assoc()['Field']; // Primera columna (ID)
+
+// Obtener datos del usuario
+$sql = $conn->prepare("SELECT * FROM usuario WHERE $id_column = ?");
 $sql->bind_param("i", $id);
 $sql->execute();
-$data = $sql->get_result()->fetch_assoc();
+$result = $sql->get_result();
+$data = $result->fetch_assoc();
+
+if (!$data) {
+    die("Error: Usuario no encontrado");
+}
 ?>
 
 <!DOCTYPE html>
@@ -29,10 +45,10 @@ $data = $sql->get_result()->fetch_assoc();
         </h1>
 
         <form method="POST" action="editar_usuario_proceso.php">
-            <input type="hidden" name="id" value="<?= $data['id'] ?>">
+            <input type="hidden" name="id" value="<?php echo $data[$id_column]; ?>">
 
             <label for="nombre" style="display: block; text-align: left; margin-top: 20px; font-weight: bold; color: #fff; font-size: 14px;">NOMBRE:</label>
-            <input type="text" id="nombre" name="nombre" value="<?= htmlspecialchars($data['nombre']) ?>" required
+            <input type="text" id="nombre" name="nombre" value="<?php echo htmlspecialchars($data['nombre']); ?>" required
                     style="width: calc(100% - 24px); padding: 12px; margin-top: 8px; font-size: 16px; border: 2px solid #5e10b1; border-radius: 8px; background-color: #1a1a1a; color: #fff;">
 
             <label for="contraseña" style="display: block; text-align: left; margin-top: 20px; font-weight: bold; color: #fff; font-size: 14px;">NUEVA CONTRASEÑA (OPCIONAL):</label>
@@ -41,8 +57,8 @@ $data = $sql->get_result()->fetch_assoc();
 
             <label for="rol" style="display: block; text-align: left; margin-top: 20px; font-weight: bold; color: #fff; font-size: 14px;">ROL:</label>
             <select id="rol" name="rol" style="width: 100%; padding: 12px; margin-top: 8px; font-size: 16px; border: 2px solid #5e10b1; border-radius: 8px; background-color: #1a1a1a; color: #fff;">
-                <option value="usuario" <?= $data['rol']=="usuario"?"selected":"" ?>>Usuario</option>
-                <option value="administrador" <?= $data['rol']=="administrador"?"selected":"" ?>>Administrador</option>
+                <option value="usuario" <?php echo ($data['rol'] == 'usuario') ? 'selected' : ''; ?>>Usuario</option>
+                <option value="administrador" <?php echo ($data['rol'] == 'administrador') ? 'selected' : ''; ?>>Administrador</option>
             </select>
             
             <button type="submit"
