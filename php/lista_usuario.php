@@ -1,11 +1,12 @@
 <?php
 session_start();
 if (!isset($_SESSION['usuario']) || $_SESSION['rol'] !== "administrador") {
-    header("Location: ../php/index.php");
+    header("Location: index.php");
     exit;
 }
 include 'conexion.php';
-$result = $conn->query("SELECT * FROM usuario");
+
+$result = $conn->query("SELECT id, nombre, rol FROM usuario");
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +23,7 @@ $result = $conn->query("SELECT * FROM usuario");
         <div>
             <h2 style="margin:0; font-size: 24px; font-weight: bold;">Gestión de Usuarios</h2>
         </div>
-        <a href="../php/cerrar_sesion.php" style="color: #fff; text-decoration: none; padding: 8px 20px; background-color: #5e10b1; border-radius: 20px; font-size: 14px; font-weight: bold;">Cerrar Sesión</a>
+        <a href="cerrar_sesion.php" style="color: #fff; text-decoration: none; padding: 8px 20px; background-color: #5e10b1; border-radius: 20px; font-size: 14px; font-weight: bold;">Cerrar Sesión</a>
     </header>
 
     <!-- CONTENIDO PRINCIPAL -->
@@ -47,21 +48,37 @@ $result = $conn->query("SELECT * FROM usuario");
                         </tr>
                     </thead>
                     <tbody>
-                        <?php while ($row = $result->fetch_assoc()) { ?>
+                        <?php 
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) { 
+                        ?>
                         <tr style="border-bottom: 1px solid #444;">
-                            <td style="padding: 15px 20px;"><?= $row['id'] ?></td>
-                            <td style="padding: 15px 20px; font-weight: bold; color: #fff;"><?= htmlspecialchars($row['nombre']) ?></td>
-                            <td style="padding: 15px 20px;"><?= htmlspecialchars($row['rol']) ?></td>
+                            <td style="padding: 15px 20px;"><?php echo $row['id']; ?></td>
+                            <td style="padding: 15px 20px; font-weight: bold; color: #fff;"><?php echo htmlspecialchars($row['nombre']); ?></td>
+                            <td style="padding: 15px 20px;">
+                                <?php 
+                                    if ($row['rol'] == 'administrador') {
+                                        echo '<span style="background-color: #ef4444; color: white; padding: 5px 10px; border-radius: 5px; font-size: 12px;">Administrador</span>';
+                                    } else {
+                                        echo '<span style="background-color: #3b82f6; color: white; padding: 5px 10px; border-radius: 5px; font-size: 12px;">Usuario</span>';
+                                    }
+                                ?>
+                            </td>
                             <td style="padding: 15px 20px; text-align: center;">
-                                <a href="editar_usuario.php?id=<?= $row['id'] ?>" style="color: #fff; background-color: #ff9900; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: bold; margin-right: 10px;">Editar</a>
-                                <a href="eliminar_usuario.php?id=<?= $row['id'] ?>" 
+                                <a href="editar_usuario.php?id=<?php echo $row['id']; ?>" style="color: #fff; background-color: #ff9900; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: bold; margin-right: 10px; display: inline-block;">Editar</a>
+                                <a href="eliminar_usuario.php?id=<?php echo $row['id']; ?>" 
                                     onclick="return confirm('¿Seguro que quieres eliminar este usuario?')" 
-                                    style="color: #fff; background-color: #ef4444; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: bold;">
+                                    style="color: #fff; background-color: #ef4444; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: bold; display: inline-block;">
                                     Eliminar
                                 </a>
                             </td>
                         </tr>
-                        <?php } ?>
+                        <?php 
+                            }
+                        } else {
+                            echo '<tr><td colspan="4" style="padding: 20px; text-align: center; color: #999;">No hay usuarios registrados</td></tr>';
+                        }
+                        ?>
                     </tbody>
                 </table>
             </div>
@@ -69,7 +86,6 @@ $result = $conn->query("SELECT * FROM usuario");
             <a href="admin_inicio.php" style="color: #6d28d9; text-decoration: none; font-weight: bold;">&larr; Volver al Panel</a>
         </div>
     </main>
-
 
 </body>
 </html>
