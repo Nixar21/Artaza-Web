@@ -28,7 +28,7 @@ $data = $sql->get_result()->fetch_assoc();
             Editar Usuario
         </h1>
 
-        <form method="POST" action="editar_usuario_proceso.php">
+        <form method="POST" action="../php/editar_usuario.php">
             <input type="hidden" name="id" value="<?= $data['id'] ?>">
 
             <label for="nombre" style="display: block; text-align: left; margin-top: 20px; font-weight: bold; color: #fff; font-size: 14px;">NOMBRE:</label>
