@@ -1,3 +1,5 @@
+<?php include("../conexion.php"); ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -156,38 +158,70 @@
                     </div>
                 </div>
 
-                <!-- Comentarios -->
-                <div style="background-color: #333; padding: 20px; border-radius: 10px;">
-                    <h4 style="color: #fff; font-size: 16px; margin: 0 0 15px 0; display: flex; align-items: center; gap: 8px;">
-                        <span style="font-size: 18px;">💬</span> Comentarios
-                    </h4>
-                    
-                    <div class="comment" style="background-color: #2b2b2b; padding: 15px; border-radius: 8px; margin-bottom: 10px; border-left: 3px solid #ff9900; transition: all 0.3s ease;">
-                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-                            <div style="width: 35px; height: 35px; background: linear-gradient(135deg, #5e10b1 0%, #7c3aed 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff; font-size: 14px;">D</div>
-                            <div>
-                                <div style="font-weight: bold; color: #fff; font-size: 14px;">Diego</div>
-                                <div style="font-size: 11px; color: #888;">Hace 1 día</div>
-                            </div>
-                        </div>
-                        <p style="font-size: 14px; margin: 0; color: #ddd; line-height: 1.6;">¡Me encantó la jugada número 3! ¡Qué emoción! Todavía me acuerdo cuando la vi en vivo.</p>
-                    </div>
+<!-- COMENTARIOS -->
+<div style="background-color: #333; padding:20px; border-radius:10px;">
 
-                    <div class="comment" style="background-color: #2b2b2b; padding: 15px; border-radius: 8px; border-left: 3px solid #ff9900; transition: all 0.3s ease;">
-                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-                            <div style="width: 35px; height: 35px; background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff; font-size: 14px;">S</div>
-                            <div>
-                                <div style="font-weight: bold; color: #fff; font-size: 14px;">Sofía</div>
-                                <div style="font-size: 11px; color: #888;">Hace 1 día</div>
-                            </div>
-                        </div>
-                        <p style="font-size: 14px; margin: 0; color: #ddd; line-height: 1.6;">¿Van a hacer una edición con jugadas de la NBA también? Sería genial ver ambas ligas comparadas.</p>
-                    </div>
+    <?php
+    include("../php/conexion.php");
+
+    // Definir el artículo ANTES de usarlo en el formulario
+    $id_articulo = $_GET['id'] ?? 1;
+    ?>
+
+    <!-- FORM PARA AGREGAR COMENTARIO -->
+    <form action="../php/guardar_comentario.php" method="POST" style="margin-bottom:20px;">
+        <input type="hidden" name="id_articulo" value="<?= $id_articulo ?>">
+
+        <input type="text" name="nombre" placeholder="Tu nombre" required
+        style="width:100%; padding:10px; margin-bottom:10px; border-radius:6px; border:none;">
+
+        <textarea name="comentario" placeholder="Escribe tu comentario..." required
+        style="width:100%; height:80px; padding:10px; border-radius:6px; border:none;"></textarea>
+
+        <button type="submit"
+        style="margin-top:10px; padding:10px 20px; background-color:#5e10b1; color:white;
+        border:none; border-radius:8px; cursor:pointer; font-weight:bold;">
+            Publicar comentario
+        </button>
+    </form>
+
+    <h4 style="color:#fff; font-size:16px;">💬 Comentarios</h4>
+
+    <?php
+    // Consulta segura
+    $sql = "SELECT * FROM comentarios WHERE articulo_id = ? ORDER BY fecha DESC";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $id_articulo);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    while ($row = $result->fetch_assoc()) {
+        $nombre = htmlspecialchars($row['nombre']);
+        $comentario = htmlspecialchars($row['comentario']);
+        $fecha = htmlspecialchars($row['fecha']);
+        $inicial = strtoupper(substr($nombre, 0, 1));
+    ?>
+        <div style="background:#2b2b2b; padding:15px; margin-top:10px; border-radius:8px; border-left:3px solid #ff9900;">
+            <div style="display:flex; gap:10px;">
+                <div style="width:35px; height:35px; background:#5e10b1; border-radius:50%; display:flex; justify-content:center; align-items:center; color:white;">
+                    <?= $inicial ?>
                 </div>
-            </article>
+                <div>
+                    <b style="color:white;"><?= $nombre ?></b>
+                    <div style="font-size:11px; color:#aaa;"><?= $fecha ?></div>
+                </div>
+            </div>
+            <p style="color:#ddd; margin-top:10px;"><?= $comentario ?></p>
 
+            <!-- Botones -->
+            <a href="../php/eliminar_comentario.php?id=<?= $row['id_coment'] ?>" 
+                style="color:red; font-size:13px;">Eliminar</a>
+            <a href="../php/editar_comentario.php?id=<?= $row['id_coment'] ?>" 
+                style="color:#5e10b1; font-size:13px; margin-left:10px;">Editar</a>
         </div>
-    </div>
+    <?php } ?>
+</div>
+
 
     <!-- FOOTER -->
     <footer style="background: linear-gradient(135deg, #430199 0%, #6d28d9 100%); color: #fff; text-align: center; padding: 30px 20px; margin-top: 50px; border-top: 3px solid #5e10b1;">

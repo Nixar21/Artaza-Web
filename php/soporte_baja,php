@@ -1,0 +1,9 @@
+<?php
+include("conexion.php");
+
+$id = $_GET['id'];
+$sql = "DELETE FROM soporte WHERE id_soporte=$id";
+$conn->query($sql);
+
+header("Location: soporte_admin.php");
+?>
